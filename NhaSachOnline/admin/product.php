@@ -95,9 +95,9 @@
                         <td>Loại hàng hóa</td>
                         <td>
                             <select name="choncatgory">
-                                <option value="Đồ ăn">Đồ Ăn</option>
-                                <option value="Đồ uống">Đồ Uống</option>
-                                <option value="Tráng miệng">Đồ Tráng Miệng</option>
+                                <option value="Phát triển bản thân">Phát triển bản thân</option>
+                                <option value="Tâm lý - Xã hội">Tâm lý - Xã hội</option>
+                                <option value="Kinh tế - Kinh doanh">Kinh tế - Kinh doanh</option>
                                 <!-- Các option khác -->
                             </select>
                         </td>

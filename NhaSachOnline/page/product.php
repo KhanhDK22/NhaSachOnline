@@ -66,9 +66,9 @@ session_start();
                     <div class="product-filters">
                         <ul>
                             <li class="active" data-filter="*">Tất Cả</li>
-                            <li data-filter=".food">Đồ Ăn </li>
-                            <li data-filter=".drinking">Đồ Uống</li>
-                            <li data-filter=".desert">Tráng Miệng</li>
+                            <li data-filter=".food">Phát triển bản thân </li>
+                            <li data-filter=".drinking">Tâm lý - Xã hội</li>
+                            <li data-filter=".desert">Kinh tế - Kinh doanh</li>
                         </ul>
                     </div>
                 </div>
@@ -87,11 +87,11 @@ if ($ketqua->num_rows > 0) {
     
         foreach ($rows as $row) {
             echo '<div class="col-lg-4 col-md-6 text-center ';
-            if ($row['prd_category'] === 'Tráng miệng') {
+            if ($row['prd_category'] === 'Tâm lý - Xã hội') {
                 echo 'desert';
-            } elseif ($row['prd_category'] === 'Đồ uống') {
+            } elseif ($row['prd_category'] === 'Kinh tế - Kinh doanh') {
                 echo 'drinking';
-            } elseif ($row['prd_category'] === 'Đồ ăn') {
+            } elseif ($row['prd_category'] === 'Phát triển bản thân') {
                 echo 'food';
             }
             echo '">';
