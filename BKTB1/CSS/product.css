@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background-color: #9c5454;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 380px;
+}
+
+.product img {
+    max-width: 100%;
+    height: 70%;
+}
+
+.product h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.product p {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.product button {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #f2f2f2;
+    padding: 14px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-items {
+    display: flex;
+    font-size: 16px;
+}
+
+.menu-items a {
+    margin: 0 40px;
+    color: #333;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.login-btn {
+    margin-left: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 2px;
+    color: black;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Baloo+Thambi);
+.text-container>span {
+    font-family: "Baloo Thambi", cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    animation: glow 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        color: var(--color);
+        text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+    }
+    10%,
+    90% {
+        color: #111;
+        text-shadow: none;
+    }
+}
+
+.footer {
+    background-color: rgb(136, 200, 200);
+    padding: 9px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    height: 75px;
+    position: relative;
+    bottom: 0;
+}
+
+.product button:hover {
+    background-color: #a73434;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}

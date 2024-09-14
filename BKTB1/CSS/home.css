@@ -1,0 +1,87 @@
+nav {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+.menu-items {
+    display: flex;
+    font-size: 20px;
+}
+
+.menu-items a {
+    margin: 0 40px;
+    color: #333;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.search-bar input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 2px;
+    margin-right: 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+}
+
+.login-btn {
+    margin-left: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 2px;
+    color: black;
+    font-size: 18px;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Baloo+Thambi);
+.text-container>span {
+    font-family: "Baloo Thambi", cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    animation: glow 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+@keyframes glow {
+    0%,
+    100% {
+        color: var(--color);
+        text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+    }
+    10%,
+    90% {
+        color: #111;
+        text-shadow: red 0 0 10px #ae2626, 0 0 50px rgba(69, 7, 33, 0.133);
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
