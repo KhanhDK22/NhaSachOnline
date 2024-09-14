@@ -182,10 +182,10 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
     <li class="nav-item"><a href="admin.php?quanly=main" class="nav-link" id='tp1'><i class="fa fa-home"></i> Trang Chủ</a></li>
     <li class="nav-item"><a href="admin.php?quanly=product" class="nav-link" id='tp2'><i class="fa fa-th-large"></i> Sản Phẩm</a></li>
     <li class="nav-item"><a href="admin.php?quanly=donhang" class="nav-link" id='tp3'><i class="fa fa-file-text-o"></i> Đơn Hàng</a></li>
-    <li class="nav-item"><a href="admin.php?quanly=giamgia" class="nav-link" id='tp4'><i class="fa fa-address-book-o"></i> Mã Giảm giá</a></li>
     <li class="nav-item"><a href="admin.php?quanly=user" class="nav-link" id='tp4'><i class="fa fa-address-book-o"></i> Khách Hàng</a></li>
     <li class="nav-item"><a href="admin.php?quanly=spnb" class="nav-link" id='tp5'><i class="fa fa-star"></i> Sản Phẩm Nổi Bật</a></li>
     <li class="nav-item"><a href="admin.php?quanly=baiviet" class="nav-link" id='tp6'><i class="fa fa-book"></i>Bài viết</a></li>
+    <li class="nav-item"><a href="admin.php?quanly=giamgia" class="nav-link" id='tp7'><i class="fa fa-file-text-o"></i> Mã Giảm giá</a></li>
     <li class="nav-item"><hr></li>
     <li class="nav-item">
         <a href="logout.php" class="nav-link">
@@ -238,7 +238,7 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
         else if($temp === "giamgia") {
             echo "<script>
             $(document).ready(function(){
-                $('#tp3').addClass('active');
+                $('#tp7').addClass('active');
             });
             </script>";
             include('giamgia.php');

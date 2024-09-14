@@ -57,26 +57,24 @@ session_start();
                     </div>
                     <div class="col-lg-6">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal">Về chúng tôi</h5>
-                        <h1 class="mb-4">Chào mừng tới <i class="fa fa-utensils text-primary me-2"></i>HK restaurant</h1>
-                        <p class="mb-4">Chào mừng đến với Hk Restaurant, nơi bạn có thể tìm thấy mọi loại món ăn ngon và đặt hàng trực tuyến một cách dễ dàng và thuận tiện. Chúng tôi tự hào là một nhà hàng đặt đồ ăn online, mang đến cho khách hàng những bữa ăn chất lượng
-                            và dịch vụ tốt nhất</p>
-                        <p class="mb-4">Chúng tôi rất mong được phục vụ và làm hài lòng khách hàng. Hãy thử đặt món ăn tại Hk Restaurant ngay hôm nay và trải nghiệm sự tiện lợi và ngon miệng của dịch vụ đặt đồ ăn online của chúng tôi. Xin cảm ơn!</p>
+                        <h1 class="mb-4">Chào mừng tới </i>Nhà Sách Online</h1>
+                        <p class="mb-4">Chào mừng đến với Nhà Sách Online, nơi bạn có thể tìm thấy mọi đầu sách đa dạng và phong phú, từ sách học thuật đến giải trí, và đặt hàng trực tuyến một cách dễ dàng và thuận tiện. Chúng tôi tự hào là một nhà sách online uy tín, mang đến cho khách hàng những cuốn sách chất lượng và dịch vụ tốt nhất
+                        <p class="mb-4">Chúng tôi rất mong được phục vụ và làm hài lòng khách hàng. Hãy thử đặt sách tại Nhà Sách Online ngay hôm nay và trải nghiệm sự tiện lợi và nhanh chóng từ dịch vụ của chúng tôi. Xin cảm ơn!</p>
                         <div class="row g-4 mb-4">
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">1500</h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Năm</p>
-                                        <h6 class="text-uppercase mb-0">Kinh Nghiệm</h6>
+                                        <h6 class="text-uppercase mb-0">Tác giả</h6>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">20</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
                                     <div class="ps-4">
-                                        <p class="mb-0">Nổi tiếng</p>
-                                        <h6 class="text-uppercase mb-0">Đầu bếp</h6>
+                                        <p class="mb-0">Quốc Gia</p>
+                                        <h6 class="text-uppercase mb-0">Toàn thế giới</h6>
                                     </div>
                                 </div>
                             </div>
@@ -89,71 +87,7 @@ session_start();
         <!-- About End -->
 
 
-        <!-- Team Start -->
-        <div class="container-xxl pt-5 pb-3">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Thành Viên Cửa Hàng</h5>
-                    <h1 class="mb-5">Các Bậc Thầy Đầu Bếp Của Chúng Tôi</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="../image/team-1.jpg" alt="Nguyễn Văn A">
-                            </div>
-                            <h5 class="mb-0">Chu Thế Toàn</h5>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="../image//team-2.jpg" alt="Nguyễn Văn B">
-                            </div>
-                            <h5 class="mb-0">Nguyễn Hồng Hà </h5>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="../image//team-3.jpg" alt="Lê Thế Chung">
-                            </div>
-                            <h5 class="mb-0">Lê Thế Chung</h5>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item text-center rounded overflow-hidden">
-                            <div class="rounded-circle overflow-hidden m-4">
-                                <img class="img-fluid" src="../image/team-4.jpg" alt="Luka Bùi">
-                            </div>
-                            <h5 class="mb-0">Luke Bùi</h5>
-                            <div class="d-flex justify-content-center mt-3">
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
-
+    
         <?php
         include('../config/footer.php')
         ?>

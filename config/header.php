@@ -73,9 +73,6 @@ mysqli_close($conn); // Đóng kết nối
                             <p class="text-white animated slideInLeft mb-4 pb-2 ">Nhà Sách Online cung cấp hàng ngàn đầu sách đa dạng thể loại từ văn học, kinh doanh, phát triển bản thân, cho đến khoa học, kỹ năng sống, và nhiều lĩnh vực khác. </p>
                             <a href="menu.html " class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft " style="color:#000000;font-weight:bolder;">Đặt Hàng Ngay</a>
                         </div>
-                        <div class="col-lg-6 text-center text-lg-end overflow-hidden ">
-                            <img class="img-fluid " src="../image/hero.png" alt="avatar ">
-                        </div>
                     </div>
                 </div>
             </div>

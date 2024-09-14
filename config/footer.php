@@ -12,8 +12,8 @@
                     <div class="col-lg-3 col-md-6 ">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Liên Hệ</h4>
                         <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>123 Phố Trần Duy Hưng,Hà Nội,Việt Nam</p>
-                        <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+84 967851017</p>
-                        <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>Manhkien203@gmail.com</p>
+                        <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+84862088336</p>
+                        <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>nhasachonline@gmail.com</p>
                         <div class="d-flex pt-2 ">
                             <a class="btn btn-outline-light btn-social " href="# "><i class="fab fa-twitter "></i></a>
                             <a class="btn btn-outline-light btn-social " href=" #"><i class="fab fa-facebook-f "></i></a>

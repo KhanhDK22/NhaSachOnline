@@ -184,25 +184,22 @@
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
-                                <i class="fa fa-coffee fa-2x text-primary"></i>
                                 <div class="ps-3">
-                                    <h6 class="mt-n1 mb-0 ">Đồ ăn</h6>
+                                    <h6 class="mt-n1 mb-0 ">Phát triển bản thân</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
-                                <i class="fa fa-hamburger fa-2x text-primary"></i>
                                 <div class="ps-3 ">
-                                    <h6 class="mt-n1 mb-0 ">Đồ uống</h6>
+                                    <h6 class="mt-n1 mb-0 ">Tâm lý - Xã hội</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
-                                <i class="fa fa-utensils fa-2x text-primary"></i>
                                 <div class="ps-3 ">
-                                    <h6 class="mt-n1 mb-0 ">Tráng miệng</h6>
+                                    <h6 class="mt-n1 mb-0 ">Kinh tế - Kinh doanh</h6>
                                 </div>
                             </a>
                         </li>
@@ -305,60 +302,59 @@
         <!-- Menu End -->
 
 
-
-        <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp " data-wow-delay="0.1s ">
-            <div class="container ">
-                <div class="text-center ">
-                    <h5 class="section-title ff-secondary text-center text-primary fw-normal ">Đánh Giá</h5>
-                    <h1 class="mb-5 ">Khách hàng thân thiết của chúng tôi!!!</h1>
+<!-- Testimonial Start -->
+<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Đánh Giá  </h5>
+            <h1 class="mb-5">Khách hàng thân thiết của chúng tôi!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Sách của nhà sách rất đa dạng và phong phú. Tôi luôn tìm thấy những cuốn sách mình yêu thích với giá cả hợp lý.</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/NSND Trung anh.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">NSND Trung Anh</h5>
+                    </div>
                 </div>
-                <div class="owl-carousel testimonial-carousel ">
-                    <div class="testimonial-item bg-transparent border rounded p-4 ">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3 "></i>
-                        <p>Đồ ăn của nhà hàng quá ngon so với tưởng tưởng mà giá cả vô cùng hợp lý</p>
-                        <div class="d-flex align-items-center ">
-                            <img class="img-fluid flex-shrink-0 rounded-circle " src="../image/NSND Trung anh.jpg " style="width: 50px; height: 50px; ">
-                            <div class="ps-3 ">
-                                <h5 class="mb-1 ">NSND Trung Anh</h5>
-                            </div>
-                        </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Mặc dù mua sách online, nhưng dịch vụ giao hàng rất nhanh chóng và chất lượng sách luôn tuyệt vời!</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/công lý.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">NSND Công Lý</h5>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4 ">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3 "></i>
-                        <p>Mặc dù là đặt đồ ăn online nhưng không thể cưỡng lại được đồ ăn nơi đây.Tuyệt vời!!</p>
-                        <div class="d-flex align-items-center ">
-                            <img class="img-fluid flex-shrink-0 rounded-circle " src="../image/công lý.jpg " style="width: 50px; height: 50px; ">
-                            <div class="ps-3 ">
-                                <h5 class="mb-1 ">NSND Công Lý</h5>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Việc mua sách tại nhà sách online rất tiện lợi và dễ dàng. Tôi thường xuyên tìm thấy những đầu sách mình cần.</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/qung èo.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">NSND Quang Tèo</h5>
                     </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4 ">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3 "></i>
-                        <p>Ăn quán xá quá là bất tiện và ồn ào .Vì vậy tại nhà và đặt đồ ăn ở HK restaurant là lựa chọn hoàn hảo </p>
-                        <div class="d-flex align-items-center ">
-                            <img class="img-fluid flex-shrink-0 rounded-circle " src="../image/qung èo.jpg " style="width: 50px; height: 50px; ">
-                            <div class="ps-3 ">
-                                <h5 class="mb-1 ">NSND Quang tèo</h5>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4 ">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3 "></i>
-                        <p>Tôi quá bất ngờ với những món ăn nơi đây.Nó quá ngon và đa dạng giúp tôi tha hồ lựa chọn</p>
-                        <div class="d-flex align-items-center ">
-                            <img class="img-fluid flex-shrink-0 rounded-circle " src="../image/xuân bắc.jpg " style="width: 50px; height: 50px; ">
-                            <div class="ps-3 ">
-                                <h5 class="mb-1 ">NSND Xuân Bắc</h5>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Tôi rất hài lòng với sự đa dạng của các đầu sách và dịch vụ khách hàng tuyệt vời từ nhà sách online này.</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/thaydz.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">Thầy Ngọc Anh</h5>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Testimonial End -->
+    </div>
+</div>
+<!-- Testimonial End -->
+
 
         <!-- footer -->
         <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn " data-wow-delay="0.1s ">
@@ -375,8 +371,8 @@
                     <div class="col-lg-3 col-md-6 ">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Liên Hệ</h4>
                         <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>123 Phố Trần Duy Hưng,Hà Nội,Việt Nam</p>
-                        <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+84 967851017</p>
-                        <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>Manhkien203@gmail.com</p>
+                        <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+84 862088336</p>
+                        <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>nhasachonline@gmail.com</p>
                         <div class="d-flex pt-2 ">
                             <a class="btn btn-outline-light btn-social " href="# "><i class="fab fa-twitter "></i></a>
                             <a class="btn btn-outline-light btn-social " href=" #"><i class="fab fa-facebook-f "></i></a>
