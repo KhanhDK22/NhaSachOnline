@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th1 06, 2024 lúc 01:58 PM
--- Phiên bản máy phục vụ: 10.4.32-MariaDB
--- Phiên bản PHP: 8.0.30
+-- Host: 127.0.0.1
+-- Generation Time: Sep 14, 2024 at 08:59 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `hk-restaurant`
+-- Database: `hk-restaurant`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `abouts`
+-- Table structure for table `abouts`
 --
 
 CREATE TABLE `abouts` (
@@ -41,7 +41,7 @@ CREATE TABLE `abouts` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -51,7 +51,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`username`, `password`, `numberphone`) VALUES
@@ -60,7 +60,7 @@ INSERT INTO `admin` (`username`, `password`, `numberphone`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contacts`
+-- Table structure for table `contacts`
 --
 
 CREATE TABLE `contacts` (
@@ -74,7 +74,7 @@ CREATE TABLE `contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `contacts`
+-- Dumping data for table `contacts`
 --
 
 INSERT INTO `contacts` (`ct_id`, `ct_name`, `ct_email`, `ct_numberphone`, `ct_problem`, `ct_detail`, `ct_time`) VALUES
@@ -83,7 +83,46 @@ INSERT INTO `contacts` (`ct_id`, `ct_name`, `ct_email`, `ct_numberphone`, `ct_pr
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `orders`
+-- Table structure for table `giamgia`
+--
+
+CREATE TABLE `giamgia` (
+  `id` int(11) NOT NULL,
+  `maGiamGia` varchar(10) DEFAULT NULL,
+  `soTien` int(11) DEFAULT NULL,
+  `trangThai` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `giamgia`
+--
+
+INSERT INTO `giamgia` (`id`, `maGiamGia`, `soTien`, `trangThai`) VALUES
+(1, 'MGG603', 20000, 1),
+(2, 'MGG990', 30000, 0),
+(3, 'MGG395', 15000, 1),
+(4, 'MGG597', 20000, 1),
+(5, 'MGG801', 30000, 1),
+(6, 'MGG845', 15000, 1),
+(7, 'MGG856', 20000, 0),
+(8, 'MGG659', 30000, 1),
+(9, 'MGG830', 150000, 0),
+(10, 'MGG832', 20000, 1),
+(11, 'MGG342', 30000, 0),
+(12, 'MGG024', 15000, 1),
+(13, 'MGG379', 20000, 0),
+(14, 'MGG995', 30000, 0),
+(15, 'MGG505', 15000, 1),
+(16, 'MGG638', 20000, 0),
+(17, 'MGG578', 30000, 1),
+(18, 'MGG244', 15000, 0),
+(19, 'MGG432', 20000, 0),
+(20, 'MGG023', 30000, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
@@ -102,7 +141,7 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `orders`
+-- Dumping data for table `orders`
 --
 
 INSERT INTO `orders` (`order_id`, `oder_username`, `oder_prd`, `oder_quantity`, `type_pay`, `order_date`, `order_status`, `order_total`, `order_address`, `Image_bank`, `ghi_chu`, `trang_thai`) VALUES
@@ -121,7 +160,7 @@ INSERT INTO `orders` (`order_id`, `oder_username`, `oder_prd`, `oder_quantity`, 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `products`
+-- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
@@ -135,11 +174,11 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `products`
+-- Dumping data for table `products`
 --
 
 INSERT INTO `products` (`prd_id`, `prd_name`, `prd_detail`, `prd_price`, `prd_quantity`, `prd_img`, `prd_category`) VALUES
-('DA01', 'Cá chép om dưa', 'Cá chép om dưa', 400000.00, 82, 'cá chép om dưa.webp', 'Đồ ăn'),
+('DA01', '\"Đắc Nhân Tâm\" - Dale Carnegie:', '\"Atomic Habits\" (Thói quen tốt) - James Clear: Cách xây dựng và duy trì thói quen tốt trong cuộc sống.', 300000.00, 50, 'đắc nhân tâm.jpg', 'Phát triển bản thân'),
 ('DA02', 'Bò Bít Tết', 'Bò Bít Tết', 300000.00, 54, 'bò bit tết.jpg', 'Đồ ăn'),
 ('DA03', 'Bò hầm rau củ', 'Bò hầm rau củ', 200000.00, 35, 'bò hầm rau củ.jpg', 'Đồ ăn'),
 ('DA04', 'Bún bò Huế', 'Bún bò huế nổi tiếng xứ Huế', 50000.00, 19, 'bun-bo-1.jpg', 'Đồ ăn'),
@@ -161,7 +200,7 @@ INSERT INTO `products` (`prd_id`, `prd_name`, `prd_detail`, `prd_price`, `prd_qu
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sp_noibat`
+-- Table structure for table `sp_noibat`
 --
 
 CREATE TABLE `sp_noibat` (
@@ -172,7 +211,7 @@ CREATE TABLE `sp_noibat` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sp_noibat`
+-- Dumping data for table `sp_noibat`
 --
 
 INSERT INTO `sp_noibat` (`sp_id`, `sp_name`, `sp_image`, `sp_price`) VALUES
@@ -196,7 +235,7 @@ INSERT INTO `sp_noibat` (`sp_id`, `sp_name`, `sp_image`, `sp_price`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
@@ -207,7 +246,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`username`, `password`, `numberphone`, `address`) VALUES
@@ -216,29 +255,35 @@ INSERT INTO `users` (`username`, `password`, `numberphone`, `address`) VALUES
 ('manhkien1', '2042003K', '0967851017', NULL);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `abouts`
+-- Indexes for table `abouts`
 --
 ALTER TABLE `abouts`
   ADD PRIMARY KEY (`about_id`);
 
 --
--- Chỉ mục cho bảng `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`username`);
 
 --
--- Chỉ mục cho bảng `contacts`
+-- Indexes for table `contacts`
 --
 ALTER TABLE `contacts`
   ADD PRIMARY KEY (`ct_id`);
 
 --
--- Chỉ mục cho bảng `orders`
+-- Indexes for table `giamgia`
+--
+ALTER TABLE `giamgia`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `orders`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
@@ -246,35 +291,45 @@ ALTER TABLE `orders`
   ADD KEY `product_id` (`oder_prd`);
 
 --
--- Chỉ mục cho bảng `products`
+-- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`prd_id`);
 
 --
--- Chỉ mục cho bảng `sp_noibat`
+-- Indexes for table `sp_noibat`
 --
 ALTER TABLE `sp_noibat`
   ADD PRIMARY KEY (`sp_id`);
 
 --
--- Chỉ mục cho bảng `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`username`);
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `orders`
+-- AUTO_INCREMENT for table `giamgia`
+--
+ALTER TABLE `giamgia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `orders`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`oder_username`) REFERENCES `users` (`username`);
 
 --
--- Các ràng buộc cho bảng `sp_noibat`
+-- Constraints for table `sp_noibat`
 --
 ALTER TABLE `sp_noibat`
   ADD CONSTRAINT `sp_noibat_ibfk_1` FOREIGN KEY (`sp_id`) REFERENCES `products` (`prd_id`);

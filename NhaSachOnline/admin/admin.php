@@ -182,6 +182,7 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
     <li class="nav-item"><a href="admin.php?quanly=main" class="nav-link" id='tp1'><i class="fa fa-home"></i> Trang Chủ</a></li>
     <li class="nav-item"><a href="admin.php?quanly=product" class="nav-link" id='tp2'><i class="fa fa-th-large"></i> Sản Phẩm</a></li>
     <li class="nav-item"><a href="admin.php?quanly=donhang" class="nav-link" id='tp3'><i class="fa fa-file-text-o"></i> Đơn Hàng</a></li>
+    <li class="nav-item"><a href="admin.php?quanly=giamgia" class="nav-link" id='tp4'><i class="fa fa-address-book-o"></i> Mã Giảm giá</a></li>
     <li class="nav-item"><a href="admin.php?quanly=user" class="nav-link" id='tp4'><i class="fa fa-address-book-o"></i> Khách Hàng</a></li>
     <li class="nav-item"><a href="admin.php?quanly=spnb" class="nav-link" id='tp5'><i class="fa fa-star"></i> Sản Phẩm Nổi Bật</a></li>
     <li class="nav-item"><a href="admin.php?quanly=baiviet" class="nav-link" id='tp6'><i class="fa fa-book"></i>Bài viết</a></li>
@@ -197,68 +198,80 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
 
     <!-- Khung hiển thị chính -->
     <div class="main">
-<?php
-        if(isset($_GET['quanly'])){
-            $temp=$_GET['quanly'];
-            if($temp==="spnb"){
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp5').addClass('active');
-                });
-                </script>";
-                include('spnb.php');                
-            }
-            else if($temp==="product"){
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp2').addClass('active');
-                });
-                </script>";
-                include('product.php');
-            }
-            else if($temp==="user"){
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp4').addClass('active');
-                });
-                </script>";
-                include('user.php');
-            }
-            else if($temp==="donhang") {
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp3').addClass('active');
-                });
-                </script>";
-                include('donhang.php');
-            }
-            else if($temp==="baiviet") {
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp6').addClass('active');
-                });
-                </script>";
-                include('about.php');
-            }
-               
-            else{
-                echo"<script>
-                $(document).ready(function(){
-                    $('#tp1').addClass('active');
-                });
-                </script>";
-                include('main.php');
-            }
+    <?php
+    if(isset($_GET['quanly'])) {
+        $temp = $_GET['quanly'];
+
+        // Kiểm tra các giá trị của $temp và gán class 'active' cho tab tương ứng
+        if($temp === "spnb") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp5').addClass('active');
+            });
+            </script>";
+            include('spnb.php');                
         }
-        else{
-            echo"<script>
+        else if($temp === "product") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp2').addClass('active');
+            });
+            </script>";
+            include('product.php');
+        }
+        else if($temp === "user") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp4').addClass('active');
+            });
+            </script>";
+            include('user.php');
+        }
+        else if($temp === "donhang") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp3').addClass('active');
+            });
+            </script>";
+            include('donhang.php');
+        }
+        else if($temp === "giamgia") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp3').addClass('active');
+            });
+            </script>";
+            include('giamgia.php');
+        }
+        else if($temp === "baiviet") {
+            echo "<script>
+            $(document).ready(function(){
+                $('#tp6').addClass('active');
+            });
+            </script>";
+            include('about.php');
+        }
+        else {
+            // Nếu không khớp với bất kỳ giá trị nào, điều hướng về trang chính
+            echo "<script>
             $(document).ready(function(){
                 $('#tp1').addClass('active');
             });
             </script>";
             include('main.php');
         }
+    } 
+    else {
+        // Trường hợp không có tham số 'quanly' trong URL, hiển thị trang chính
+        echo "<script>
+        $(document).ready(function(){
+            $('#tp1').addClass('active');
+        });
+        </script>";
+        include('main.php');
+    }
 ?>
+
 </div>
         <footer>
 
