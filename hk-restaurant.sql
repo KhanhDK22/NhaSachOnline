@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2024 at 08:59 AM
+-- Generation Time: Sep 14, 2024 at 09:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -34,7 +34,7 @@ CREATE TABLE `abouts` (
   `about_img3` varchar(200) NOT NULL,
   `about_title` varchar(100) NOT NULL,
   `about_detail` text NOT NULL,
-  `about_time` date NOT NULL DEFAULT current_timestamp(),
+  `about_time` timestamp NOT NULL DEFAULT current_timestamp(),
   `trang_thai` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -178,24 +178,23 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`prd_id`, `prd_name`, `prd_detail`, `prd_price`, `prd_quantity`, `prd_img`, `prd_category`) VALUES
-('DA01', '\"Đắc Nhân Tâm\" - Dale Carnegie:', '\"Atomic Habits\" (Thói quen tốt) - James Clear: Cách xây dựng và duy trì thói quen tốt trong cuộc sống.', 300000.00, 50, 'đắc nhân tâm.jpg', 'Phát triển bản thân'),
-('DA02', 'Bò Bít Tết', 'Bò Bít Tết', 300000.00, 54, 'bò bit tết.jpg', 'Đồ ăn'),
-('DA03', 'Bò hầm rau củ', 'Bò hầm rau củ', 200000.00, 35, 'bò hầm rau củ.jpg', 'Đồ ăn'),
-('DA04', 'Bún bò Huế', 'Bún bò huế nổi tiếng xứ Huế', 50000.00, 19, 'bun-bo-1.jpg', 'Đồ ăn'),
-('DA05', 'Bánh xèo Hà Nội', 'bánh xèo', 75000.00, 40, 'bánh xeo.jpg', 'Đồ ăn'),
-('DA06', 'Gà đồi chiên mắm tỏi', 'Gà đồi chiên mắm tỏi', 300000.00, 109, 'gà chiên mắm tỏi.jpg', 'Đồ ăn'),
-('DU01', '7 Up', '7up', 15000.00, 17, '7 up.jpg', 'Đồ uống'),
-('DU02', 'Coca', 'Coca-Cola (hay còn gọi là Coca, Coke) là một thương hiệu nước ngọt có ga chứa nước cacbon dioxide bão hòa được sản xuất bởi Công ty Coca-Cola. Coca-Cola được điều chế bởi dược sĩ John Pemberton vào cuối thế kỷ XIX với mục đích ban đầu là trở thành một loại biệt dược.', 15000.00, 16, 'cacacola.png', 'Đồ uống'),
-('DU03', 'Rượu Nếp', 'Rượu nếp quê là rượu được ủ từ gạo nếp và được chưng cất theo phương pháp gia truyền. Không chỉ là đồ uống, rượu nếp cũng được dùng rất nhiều trong nấu ăn. Đây cũng là loại gia vị có chức năng khử mùi hiệu quả.', 50000.00, 85, 'rượu nếp.png', 'Đồ uống'),
-('DU04', 'Rươu vang Chile', 'Rươu vang Chile', 170000.00, 115, 'rượu vang đỏ chile.jpg', 'Đồ ăn'),
-('DU05', 'Rượu ngô Tây Bắc', 'Rượu ngô Tây Bắc', 60000.00, 114, 'rượu ngô.jpg', 'Đồ uống'),
-('DU06', 'Rượu mơ ', 'Rượu mơ -đậm đà từng ly', 75000.00, 48, 'rượu mơ.jpeg', 'Đồ uống'),
-('TM01', 'Cam siêu ngọt', 'Cam siêu ngọt', 150000.00, 17, 'cam.jpg', 'Tráng miệng'),
-('TM02', 'Dâu Tây', 'quả đỏ, mọng nước, hương thơm mùi kẹo ngọt và có vị ngọt thanh đậm đà, khác với tất cả các loại dâu khác đang được trồng tại Đà Lạt và vùng lân cận hiện nay: Dâu tây nhật Đà Lạt – mê hoặc từ vị ngon! Dâu tây Nhật được xem là giống dâu cao cấp hiện nay được trồng tại Đà Lạt.', 50000.00, 40, 'dâu tây.jpg', 'Tráng miệng'),
-('TM03', 'Dưa Hấu', 'đa dạng về hình dạng và màu sắc, thường có màu xanh nhạt và có những đường kẻ từ trên xuống dưới. Hình dạng được xem xét với mặt phẳng cắt ngang từ cuống trái đến đuôi trái dưa. Có các dạng chính sau: dạng thuôn dài, dạng trái oval, dạng trái tròn. Hạt dưa cũng rất đa dạng về kích cỡ (lớn, trung bình, nhỏ).', 45000.00, 65, 'dưa hấu.jpg', 'Tráng miệng'),
-('TM04', 'Thanh long trắng', 'Thanh long trắng', 50000.00, 19, 'thanh long.jpg', 'Tráng miệng'),
-('TM05', 'Kem dâu', 'Kem dâu -với dâu tây xay nguyên chất 100%', 18000.00, 60, 'kem dâu.jpg', 'Tráng miệng'),
-('TM06', 'Dưa leo', 'Dưa leo bổ dọc', 15000.00, 20, 'dưa leo.jpg', 'Tráng miệng');
+('DA01', 'Đắc nhân tâm', 'Hướng dẫn cách tương tác và thuyết phục người khác một cách hiệu quả.', 49.00, 25, 'đắc nhân tâm.jpg', 'Đồ ăn'),
+('DA02', 'Atomic Habits', 'Cách xây dựng và duy trì thói quen tốt trong cuộc sống.', 298.40, 12, 'Atomic Habits.png', 'Đồ ăn'),
+('DA03', '7 Thói Quen Hiệu Quả', 'Những thói quen dẫn đến thành công cá nhân và sự nghiệp.', 397.32, 34, '7 Thói Quen Hiệu Quả.jpg', 'Đồ ăn'),
+('DA04', '\"Tâm lý học đám đông\" - Gustave Le Bon', 'Phân tích tâm lý và hành vi của đám đông trong xã hội.', 111500.00, 45, 'download.jpg', 'Đồ ăn'),
+('DA05', '\"Dám Bị Ghét\" - Ichiro Kishimi & Fumitake Koga', 'Sách về tư duy Adlerian và việc chấp nhận bản thân.', 95.20, 28, 'Dám Bị Ghét.png', 'Đồ ăn'),
+('DA06', '\"The Power of Now\" - Eckhart Tolle', 'Sách về cách sống trong hiện tại để đạt được bình an nội tâm.', 146.16, 45, 'The Power of Now.jpg', 'Đồ ăn'),
+('DU01', '\"Sapiens: Lược Sử Loài Người\" - Yuval Noah Harari', 'Khám phá lịch sử và tâm lý con người từ thời tiền sử đến hiện đại.', 127000.00, 21, 'Sapiens Lược Sử Loài Người.png', 'Đồ ăn'),
+('DU02', '\"Thinking, Fast and Slow\" - Daniel Kahneman', 'Phân tích cách con người ra quyết định và những lỗi tư duy thường gặp.', 150000.00, 53, 'Thinking.jpg', 'Đồ ăn'),
+('DU03', '\"Influence: The Psychology of Persuasion\" (Tâm lý học thuyết phục) - Robert Cialdini', 'Những nguyên lý tâm lý khiến con người dễ bị thuyết phục.', 169000.00, 31, 'tâm lý học thuyết phục.jfif', 'Đồ ăn'),
+('DU04', '\"The 4-Hour Workweek\" (Tuần làm việc 4 giờ) - Timothy Ferriss', 'Phương pháp tạo thu nhập thụ động và làm việc ít nhưng hiệu quả.', 472000.00, 44, 'tuần làm việc 4 giờ.jfif', 'Tráng miệng'),
+('DU05', '\"Outliers: The Story of Success\" (Những kẻ xuất chúng) - Malcolm Gladwell', 'Nghiên cứu về các yếu tố tạo nên sự thành công vượt bậc.', 113500.00, 3, 'những kẻ xuất chúng.jfif', 'Đồ ăn'),
+('DU06', '\"Cha Giàu, Cha Nghèo\" - Robert Kiyosaki', 'Những bài học về tư duy tài chính và làm giàu.', 490000.00, 55, 'cha giàu, cha nghèo.jfif', 'Đồ ăn'),
+('TM01', '\"The Lean Startup\" - Eric Ries', '\"The Lean Startup\" - Eric Ries', 132000.00, 7, 'The Lean Startup', 'Đồ ăn'),
+('TM02', '\"Tư duy triệu phú\" - T. Harv Eker', 'Khám phá sự khác biệt trong tư duy của người giàu và người nghèo.', 108000.00, 9, 'tư duy triệu phú.jfif', 'Đồ ăn'),
+('TM03', '\"Good to Great\" (Từ tốt đến vĩ đại) - Jim Collins', 'Nghiên cứu về cách các công ty chuyển từ thành công bình thường đến xuất sắc.', 99000.00, 43, 'từ tốt đến vĩ đại.jfif', 'Tráng miệng'),
+('TM04', '\"The 4-Hour Workweek\" (Tuần làm việc 4 giờ) - Timothy Ferriss', 'Phương pháp tạo thu nhập thụ động và làm việc ít nhưng hiệu quả.', 472000.00, 44, 'tuần làm việc 4 giờ.jfif', 'Đồ ăn'),
+('TM05', '\"The Intelligent Investor\" (Nhà đầu tư thông minh) - Benjamin Graham', 'Cuốn sách kinh điển về đầu tư dài hạn và cách quản lý rủi ro tài chính.', 413000.00, 33, 'nhà đầu tư thông minh.jfif', 'Đồ ăn');
 
 -- --------------------------------------------------------
 
@@ -265,48 +264,10 @@ ALTER TABLE `abouts`
   ADD PRIMARY KEY (`about_id`);
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`username`);
-
---
--- Indexes for table `contacts`
---
-ALTER TABLE `contacts`
-  ADD PRIMARY KEY (`ct_id`);
-
---
 -- Indexes for table `giamgia`
 --
 ALTER TABLE `giamgia`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`order_id`),
-  ADD KEY `oder_username` (`oder_username`),
-  ADD KEY `product_id` (`oder_prd`);
-
---
--- Indexes for table `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`prd_id`);
-
---
--- Indexes for table `sp_noibat`
---
-ALTER TABLE `sp_noibat`
-  ADD PRIMARY KEY (`sp_id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -317,22 +278,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `giamgia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `orders`
---
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`oder_username`) REFERENCES `users` (`username`);
-
---
--- Constraints for table `sp_noibat`
---
-ALTER TABLE `sp_noibat`
-  ADD CONSTRAINT `sp_noibat_ibfk_1` FOREIGN KEY (`sp_id`) REFERENCES `products` (`prd_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
