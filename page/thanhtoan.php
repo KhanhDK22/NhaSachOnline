@@ -1,5 +1,6 @@
 <?php
 session_start();
+$discountAmount = isset($_SESSION['discountAmount']) ? $_SESSION['discountAmount'] : 0;
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -189,11 +190,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nameoder'], $_POST['a
                                                 }
                                                 $shipping_cost = 25000;
                                                 $total_amount += $shipping_cost;
+                                                  // Trừ mã giảm giá
+                                                 $total_amount -= $discountAmount;
                                                 echo '<tr class="total-data">
                                                         <td><strong>Vận chuyển </strong></td>
                                                         <td></td>
                                                         <td>' . number_format($shipping_cost, 2, ".", ",") . 'đ</td>
                                                     </tr>';
+                                                    // Hiển thị dòng và giá trị của mã giảm giá trong bảng
+                                                    echo '<tr class="total-data">
+                                                    <td><strong>Giảm giá </strong></td>
+                                                    <td></td>
+                                                    <td>' ."-". number_format($discountAmount, 2, ".", ",") . 'đ</td>
+                                                </tr>';
                                                 echo '<tr class="total-data">
                                                         <td><strong>Tổng  </strong></td>
                                                         <td></td>

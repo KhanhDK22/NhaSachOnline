@@ -92,7 +92,6 @@ if(!isset($_SESSION['username'])){
                                         echo '<td class="product-total">' . $formatted_total_price . '</td>';
                                         
                                         echo '</tr>';
-                                        $conn->close();
                                     }
                                 }
                                     ?>
@@ -102,9 +101,79 @@ if(!isset($_SESSION['username'])){
                                     </table>
                                 </div>
                             </div>
-
+                            
                             <div class="col-lg-4">
                                 <div class="total-section">
+                                <div class="coupon-section">
+                                    <h3>Voucher</h3>
+                                    <div class="coupon-form-wrap">
+                                    <form action="" method="POST">
+                                     <p><input type="text" name="maGiamGia" placeholder="maGiamGia"></p>
+                                     <p><input type="submit" value="Xác Nhận"></p>
+                                 </form>
+                                </div>
+
+                                <?php
+
+
+                                // Khởi tạo biến để lưu giá trị của mã giảm giá
+                                $discountAmount = 0;
+                                $message = '';
+
+                                // Kiểm tra xem có dữ liệu 'maGiamGia' trong $_POST không
+                                if (isset($_POST['maGiamGia'])) {
+    // Lấy mã giảm giá từ form
+    $maGiamGiaNhap = $_POST['maGiamGia'];
+
+    // Tạo câu lệnh SQL để kiểm tra mã giảm giá
+    $sql = "SELECT * FROM giamgia WHERE maGiamGia = ?";
+
+    // Chuẩn bị câu lệnh
+    $stmt = $conn->prepare($sql);
+    if ($stmt === false) {
+        die("Lỗi chuẩn bị câu lệnh: " . $conn->error);
+    }
+
+    // Liên kết tham số với câu lệnh
+    $stmt->bind_param("s", $maGiamGiaNhap);
+
+    // Thực hiện câu lệnh
+    $stmt->execute();
+
+    // Lấy kết quả
+    $result = $stmt->get_result();
+
+    // Kiểm tra xem mã giảm giá có tồn tại và còn hiệu lực không
+    if ($result->num_rows > 0) {
+        // Có mã giảm giá tồn tại
+        $row = $result->fetch_assoc();
+
+        // Kiểm tra trạng thái của mã giảm giá
+        if ($row['trangThai'] == 1) { // 1 cho mã giảm giá hợp lệ và chưa được sử dụng
+            // Lấy giá trị giảm giá từ cột soTien
+            $discountAmount = $row['soTien'];
+            $message = "Mã giảm giá hợp lệ. Số tiền giảm: " . number_format($discountAmount, 2, ".", ",") . "đ";
+        } else {
+            $message = "Mã giảm giá đã được sử dụng hoặc không hợp lệ.";
+        }
+    } else {
+        $message = "Mã giảm giá không tồn tại.";
+    }
+    $_SESSION['discountAmount'] = $discountAmount;
+    // Đóng câu lệnh
+    $stmt->close();
+} 
+
+?>
+<!-- Hiển thị thông báo bằng alert -->
+<script>
+    // Hiển thị thông báo nếu có
+    var message = "<?php echo addslashes($message); ?>";
+    if (message) {
+        alert(message);
+    }
+</script>
+                                </div>
                                     <table class="total-table">
                                         <thead class="total-table-head">
                                             <tr class="table-total-row">
@@ -132,6 +201,8 @@ if(!isset($_SESSION['username'])){
                                                 // Thêm chi phí vận chuyển
                                                 $shipping_cost = 25000;
                                                 $total_amount += $shipping_cost;
+                                                 // Trừ mã giảm giá
+                                                 $total_amount -= $discountAmount;
 
                                                 // Hiển thị dòng và giá trị của vận chuyển trong bảng
                                                 echo '<tr class="total-data">
@@ -139,6 +210,12 @@ if(!isset($_SESSION['username'])){
                                                         <td></td>
                                                         <td>' . number_format($shipping_cost, 2, ".", ",") . 'đ</td>
                                                     </tr>';
+                                                // Hiển thị dòng và giá trị của mã giảm giá trong bảng
+                                                   echo '<tr class="total-data">
+                                                   <td><strong>Giảm giá </strong></td>
+                                                   <td></td>
+                                                   <td>' ."-". number_format($discountAmount, 2, ".", ",") . 'đ</td>
+                                               </tr>';
 
                                                 // Hiển thị tổng số tiền
                                                 echo '<tr class="total-data">
@@ -155,16 +232,7 @@ if(!isset($_SESSION['username'])){
                                         <a href="thanhtoan.php" class="boxed-btn black">Thanh Toán</a>
                                     </div>
                                 </div>
-
-                                <div class="coupon-section">
-                                    <h3>Voucher</h3>
-                                    <div class="coupon-form-wrap">
-                                        <form action="">
-                                            <p><input type="text" placeholder="Coupon"></p>
-                                            <p><input type="submit" value="Xác Nhận"></p>
-                                        </form>
-                                      
-                                    </div>
+                               
                                 </div>
                             </div>
                         </div>
@@ -312,3 +380,11 @@ function myFunction() {
 </body>
 
 </html>
+
+
+
+
+<?php
+// Đóng kết nối
+$conn->close();
+?>
