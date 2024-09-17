@@ -153,13 +153,15 @@ if(!isset($_SESSION['username'])){
             // Lấy giá trị giảm giá từ cột soTien
             $discountAmount = $row['soTien'];
             $message = "Mã giảm giá hợp lệ. Số tiền giảm: " . number_format($discountAmount, 2, ".", ",") . "đ";
+            
         } else {
             $message = "Mã giảm giá đã được sử dụng hoặc không hợp lệ.";
         }
     } else {
         $message = "Mã giảm giá không tồn tại.";
     }
-    $_SESSION['discountAmount'] = $discountAmount;
+    $_SESSION['discountAmount'] = $discountAmount;// lưu giá lại để chuyển sang thanh toán
+ 
     // Đóng câu lệnh
     $stmt->close();
 } 
