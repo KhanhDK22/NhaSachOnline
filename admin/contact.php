@@ -80,7 +80,7 @@
 
         <div class="notification">
             <div>
-                <h4>Dear HK restaurant</h4>
+                <h4>Dear </h4>
             </div>
             <?php
 if (isset($_GET['id']) ||(!empty($_GET['id'])) ){

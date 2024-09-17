@@ -66,7 +66,7 @@ mysqli_close($conn); // Đóng kết nối
 
             <div class="container-xxl py-5 bg-dark hero-header mb-5">
                 <div class="container text-center my-5 pt-5 pb-4">
-                    <h4 class="display-3 text-white mb-3 animated slideInDown">HK Xin Kính Chào Quý Khách</h4>
+                    <h4 class="display-3 text-white mb-3 animated slideInDown">Nhà Sách Xin Kính Chào Quý Khách</h4>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="../page/index.php">Trang Chủ</a></li>
@@ -80,7 +80,7 @@ mysqli_close($conn); // Đóng kết nối
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                <input style="width: 60em;margin-left: 20%;" id="myInput" type="search" onkeyup="myFunction()" class="form-control bg-transparent p-3" placeholder="Nhập vào món ăn của bạn" aria-describedby="search-icon-1">
+                <input style="width: 60em;margin-left: 20%;" id="myInput" type="search" onkeyup="myFunction()" class="form-control bg-transparent p-3" placeholder="Nhập tên sách bạn cần tìm" aria-describedby="search-icon-1">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center">

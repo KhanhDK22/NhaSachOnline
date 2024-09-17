@@ -17,7 +17,7 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Admin -HK restaurant</title>
+    <title>Admin </title>
     <link rel="shortcut icon" href="img/favicon.ico" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -126,7 +126,7 @@ if(!isset($_SESSION['username']) || $_SESSION['username'] !== 'admin') {
         <div class="header-container"> 
         <h3><a href="../page/index.php"><i class="fa fa-place-of-worship"></i><<<<<<< Home</a></h3>
 
-            <h1 class="restaurant-title">HK Restaurant</h1>
+            <h1 class="restaurant-title">Nhà Sách Onlie</h1>
         
             <?php
     require('../config/connect.php');

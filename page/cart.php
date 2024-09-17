@@ -12,7 +12,7 @@ if(!isset($_SESSION['username'])){
 
 <head>
     <meta charset="utf-8">
-    <title>HK Restaurant</title>
+    <title>Nhà sách online</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">

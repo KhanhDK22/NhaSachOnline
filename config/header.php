@@ -82,7 +82,7 @@ mysqli_close($conn); // Đóng kết nối
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                <input style="width: 60em;margin-left: 20%;" id="myInput" type="search" onkeyup="myFunction()" class="form-control bg-transparent p-3" placeholder="Nhập vào món ăn của bạn" aria-describedby="search-icon-1">
+                <input style="width: 60em;margin-left: 20%;" id="myInput" type="search" onkeyup="myFunction()" class="form-control bg-transparent p-3" placeholder="Nhập tên sách bạn cần tìm" aria-describedby="search-icon-1">
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex align-items-center">
