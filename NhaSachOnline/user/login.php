@@ -87,8 +87,8 @@ $conn->close();
         <a href="javascript:history.go(-1)" style="text-decoration: none;padding-right:90%;color:black;">Back</a>
     </div>
     <div class="logo">
-        <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>HK Restaurant</h1>
-        <p class="logo1">Nơi cung cấp một loạt sản phẩm đa dạng,các món ăn từ bình dân đến hảo hạn,<br> <span style="margin-left: 5em;">với dịch vụ giao hàng nhanh chóng và chăm sóc khách hàng tận tình.</span></p>
+        <h1 class="text-primary m-0"></i>Nhà Sách online</h1>
+        <p class="logo1">Nơi cung cấp một loạt sản phẩm đa dạng, mọi loại sách bạn có thể tìm được<br> <span style="margin-left: 5em;">với dịch vụ giao hàng nhanh chóng và chăm sóc khách hàng tận tình.</span></p>
     </div>
 
     <div class="login-box">
