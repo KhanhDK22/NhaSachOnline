@@ -144,21 +144,22 @@
                         <p class="mb-4 ">Chào mừng tới Nhà Sách Online, nơi bạn có thể tìm thấy mọi thể loại sách yêu thích và đặt mua trực tuyến một cách dễ dàng và thuận tiện. Chúng tôi tự hào là một nhà sách trực tuyến, mang đến cho khách hàng những cuốn sách chất lượng cùng dịch vụ tốt nhất.
                             và dịch vụ tốt nhất</p>
                         <p class="mb-4 ">Chúng tôi luôn mong muốn được phục vụ và làm hài lòng khách hàng. Hãy thử trải nghiệm mua sắm tại Nhà Sách Online ngay hôm nay và khám phá sự tiện lợi trong việc mua sách trực tuyến với đa dạng đầu sách và giao hàng nhanh chóng. Xin cảm ơn!</p>
-                        <div class="row g-4 mb-4">
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">1500</h1>
-                                    <div class="ps-4">
-                                        <h6 class="text-uppercase mb-0">Tác giả</h6>
+                        <div class="row g-4 mb-4 ">
+                            <div class="col-sm-6 ">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">15</h1>
+                                    <div class="ps-4 ">
+                                        <p class="mb-0 ">Năm</p>
+                                        <h6 class="text-uppercase mb-0 ">Kinh Nghiệm</h6>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
-                                    <div class="ps-4">
-                                        <p class="mb-0">Quốc Gia</p>
-                                        <h6 class="text-uppercase mb-0">Toàn thế giới</h6>
+                            <div class="col-sm-6 ">
+                                <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">20</h1>
+                                    <div class="ps-4 ">
+                                        <p class="mb-0 ">Nổi tiếng</p>
+                                        <h6 class="text-uppercase mb-0 ">Đầu bếp</h6>
                                     </div>
                                 </div>
                             </div>
