@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 14, 2024 at 09:39 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Host: localhost:3306
+-- Generation Time: Sep 18, 2024 at 01:51 AM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,14 +28,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `abouts` (
-  `about_id` varchar(10) NOT NULL,
-  `about_img1` varchar(200) NOT NULL,
-  `about_img2` varchar(200) NOT NULL,
-  `about_img3` varchar(200) NOT NULL,
-  `about_title` varchar(100) NOT NULL,
-  `about_detail` text NOT NULL,
-  `about_time` timestamp NOT NULL DEFAULT current_timestamp(),
-  `trang_thai` varchar(25) NOT NULL
+  `about_id` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `about_img1` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `about_img2` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `about_img3` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `about_title` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `about_detail` text COLLATE utf8mb4_general_ci NOT NULL,
+  `about_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `trang_thai` varchar(25) COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -45,9 +45,9 @@ CREATE TABLE `abouts` (
 --
 
 CREATE TABLE `admin` (
-  `username` varchar(50) NOT NULL,
-  `password` varchar(30) DEFAULT NULL,
-  `numberphone` varchar(20) DEFAULT NULL
+  `username` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(30) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `numberphone` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -64,13 +64,13 @@ INSERT INTO `admin` (`username`, `password`, `numberphone`) VALUES
 --
 
 CREATE TABLE `contacts` (
-  `ct_id` varchar(10) NOT NULL,
-  `ct_name` varchar(50) NOT NULL,
-  `ct_email` varchar(100) NOT NULL,
-  `ct_numberphone` varchar(15) NOT NULL,
-  `ct_problem` varchar(150) NOT NULL,
-  `ct_detail` text NOT NULL,
-  `ct_time` timestamp NOT NULL DEFAULT current_timestamp()
+  `ct_id` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_name` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_numberphone` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_problem` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_detail` text COLLATE utf8mb4_general_ci NOT NULL,
+  `ct_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -87,9 +87,9 @@ INSERT INTO `contacts` (`ct_id`, `ct_name`, `ct_email`, `ct_numberphone`, `ct_pr
 --
 
 CREATE TABLE `giamgia` (
-  `id` int(11) NOT NULL,
-  `maGiamGia` varchar(10) DEFAULT NULL,
-  `soTien` int(11) DEFAULT NULL,
+  `id` int NOT NULL,
+  `maGiamGia` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `soTien` int DEFAULT NULL,
   `trangThai` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -126,18 +126,18 @@ INSERT INTO `giamgia` (`id`, `maGiamGia`, `soTien`, `trangThai`) VALUES
 --
 
 CREATE TABLE `orders` (
-  `order_id` varchar(11) NOT NULL,
-  `oder_username` varchar(100) NOT NULL,
-  `oder_prd` varchar(150) NOT NULL,
-  `oder_quantity` int(11) NOT NULL,
-  `type_pay` varchar(150) NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `order_status` varchar(150) NOT NULL,
-  `order_total` varchar(15) DEFAULT NULL,
-  `order_address` varchar(250) DEFAULT NULL,
-  `Image_bank` varchar(200) NOT NULL,
-  `ghi_chu` varchar(150) NOT NULL,
-  `trang_thai` varchar(150) NOT NULL DEFAULT 'Đơn mới'
+  `order_id` varchar(11) COLLATE utf8mb4_general_ci NOT NULL,
+  `oder_username` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `oder_prd` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `oder_quantity` int NOT NULL,
+  `type_pay` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `order_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `order_status` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `order_total` varchar(15) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `order_address` varchar(250) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Image_bank` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `ghi_chu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `trang_thai` varchar(150) COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'Đơn mới'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -164,13 +164,13 @@ INSERT INTO `orders` (`order_id`, `oder_username`, `oder_prd`, `oder_quantity`, 
 --
 
 CREATE TABLE `products` (
-  `prd_id` varchar(15) NOT NULL,
-  `prd_name` varchar(150) NOT NULL,
-  `prd_detail` text NOT NULL,
+  `prd_id` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `prd_name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `prd_detail` text COLLATE utf8mb4_general_ci NOT NULL,
   `prd_price` decimal(15,2) NOT NULL,
-  `prd_quantity` int(11) NOT NULL,
-  `prd_img` varchar(200) DEFAULT NULL,
-  `prd_category` varchar(50) DEFAULT NULL
+  `prd_quantity` int NOT NULL,
+  `prd_img` varchar(200) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `prd_category` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -178,23 +178,23 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`prd_id`, `prd_name`, `prd_detail`, `prd_price`, `prd_quantity`, `prd_img`, `prd_category`) VALUES
-('DA01', 'Đắc nhân tâm', 'Hướng dẫn cách tương tác và thuyết phục người khác một cách hiệu quả.', 49.00, 25, 'đắc nhân tâm.jpg', 'Đồ ăn'),
-('DA02', 'Atomic Habits', 'Cách xây dựng và duy trì thói quen tốt trong cuộc sống.', 298.40, 12, 'Atomic Habits.png', 'Đồ ăn'),
-('DA03', '7 Thói Quen Hiệu Quả', 'Những thói quen dẫn đến thành công cá nhân và sự nghiệp.', 397.32, 34, '7 Thói Quen Hiệu Quả.jpg', 'Đồ ăn'),
-('DA04', '\"Tâm lý học đám đông\" - Gustave Le Bon', 'Phân tích tâm lý và hành vi của đám đông trong xã hội.', 111500.00, 45, 'download.jpg', 'Đồ ăn'),
-('DA05', '\"Dám Bị Ghét\" - Ichiro Kishimi & Fumitake Koga', 'Sách về tư duy Adlerian và việc chấp nhận bản thân.', 95.20, 28, 'Dám Bị Ghét.png', 'Đồ ăn'),
-('DA06', '\"The Power of Now\" - Eckhart Tolle', 'Sách về cách sống trong hiện tại để đạt được bình an nội tâm.', 146.16, 45, 'The Power of Now.jpg', 'Đồ ăn'),
-('DU01', '\"Sapiens: Lược Sử Loài Người\" - Yuval Noah Harari', 'Khám phá lịch sử và tâm lý con người từ thời tiền sử đến hiện đại.', 127000.00, 21, 'Sapiens Lược Sử Loài Người.png', 'Đồ ăn'),
-('DU02', '\"Thinking, Fast and Slow\" - Daniel Kahneman', 'Phân tích cách con người ra quyết định và những lỗi tư duy thường gặp.', 150000.00, 53, 'Thinking.jpg', 'Đồ ăn'),
-('DU03', '\"Influence: The Psychology of Persuasion\" (Tâm lý học thuyết phục) - Robert Cialdini', 'Những nguyên lý tâm lý khiến con người dễ bị thuyết phục.', 169000.00, 31, 'tâm lý học thuyết phục.jfif', 'Đồ ăn'),
-('DU04', '\"The 4-Hour Workweek\" (Tuần làm việc 4 giờ) - Timothy Ferriss', 'Phương pháp tạo thu nhập thụ động và làm việc ít nhưng hiệu quả.', 472000.00, 44, 'tuần làm việc 4 giờ.jfif', 'Tráng miệng'),
-('DU05', '\"Outliers: The Story of Success\" (Những kẻ xuất chúng) - Malcolm Gladwell', 'Nghiên cứu về các yếu tố tạo nên sự thành công vượt bậc.', 113500.00, 3, 'những kẻ xuất chúng.jfif', 'Đồ ăn'),
-('DU06', '\"Cha Giàu, Cha Nghèo\" - Robert Kiyosaki', 'Những bài học về tư duy tài chính và làm giàu.', 490000.00, 55, 'cha giàu, cha nghèo.jfif', 'Đồ ăn'),
-('TM01', '\"The Lean Startup\" - Eric Ries', '\"The Lean Startup\" - Eric Ries', 132000.00, 7, 'The Lean Startup', 'Đồ ăn'),
-('TM02', '\"Tư duy triệu phú\" - T. Harv Eker', 'Khám phá sự khác biệt trong tư duy của người giàu và người nghèo.', 108000.00, 9, 'tư duy triệu phú.jfif', 'Đồ ăn'),
-('TM03', '\"Good to Great\" (Từ tốt đến vĩ đại) - Jim Collins', 'Nghiên cứu về cách các công ty chuyển từ thành công bình thường đến xuất sắc.', 99000.00, 43, 'từ tốt đến vĩ đại.jfif', 'Tráng miệng'),
-('TM04', '\"The 4-Hour Workweek\" (Tuần làm việc 4 giờ) - Timothy Ferriss', 'Phương pháp tạo thu nhập thụ động và làm việc ít nhưng hiệu quả.', 472000.00, 44, 'tuần làm việc 4 giờ.jfif', 'Đồ ăn'),
-('TM05', '\"The Intelligent Investor\" (Nhà đầu tư thông minh) - Benjamin Graham', 'Cuốn sách kinh điển về đầu tư dài hạn và cách quản lý rủi ro tài chính.', 413000.00, 33, 'nhà đầu tư thông minh.jfif', 'Đồ ăn');
+('DA01', '\"Đắc Nhân Tâm\" - Dale Carnegie', 'Hướng dẫn cách tương tác và thuyết phục người khác một cách hiệu quả.', 49000.00, 25, 'đắc nhân tâm.jpg', 'Phát triển bản thân'),
+('DA02', '\"Atomic Habits\" (Thói quen tốt) - James Clear', 'Cách xây dựng và duy trì thói quen tốt trong cuộc sống.', 298400.00, 12, 'Atomic Habits.png', 'Phát triển bản thân'),
+('DA03', '\"7 Thói Quen Hiệu Quả\" - Stephen R. Covey', '\"7 Thói Quen Hiệu Quả\" - Stephen R. Covey', 397320.00, 34, '7 Thói Quen Hiệu Quả.jpg', 'Phát triển bản thân'),
+('DA04', '\"Nhà Giả Kim\" - Paulo Coelho', 'Câu chuyện về hành trình khám phá bản thân đầy cảm hứng.', 111500.00, 45, 'download.jpg', 'Phát triển bản thân'),
+('DA05', '\"Dám Bị Ghét\" - Ichiro Kishimi & Fumitake Koga', 'Sách về tư duy Adlerian và việc chấp nhận bản thân.', 95200.00, 28, 'Dám Bị Ghét.png', 'Phát triển bản thân'),
+('DA06', '\"The Power of Now\" (Sức mạnh của hiện tại) - Eckhart Tolle', 'Sách về cách sống trong hiện tại để đạt được bình an nội tâm', 146160.00, 45, 'The Power of Now.jpg', 'Phát triển bản thân'),
+('DU01', '\"Sapiens: Lược Sử Loài Người\" - Yuval Noah Harari', 'Khám phá lịch sử và tâm lý con người từ thời tiền sử đến hiện đại.', 127000.00, 21, 'Sapiens Lược Sử Loài Người.png', 'Tâm lý - Xã hội'),
+('DU02', '\"Thinking, Fast and Slow\" - Daniel Kahneman', 'Phân tích cách con người ra quyết định và những lỗi tư duy thường gặp.', 150000.00, 53, 'Thinking.jpg', 'Tâm lý - Xã hội'),
+('DU03', '\"Tâm lý học đám đông\" - Gustave Le Bon', 'Phân tích tâm lý và hành vi của đám đông trong xã hội.', 397320.00, 12, 'Tâm lý học đám đông.png', 'Tâm lý - Xã hội'),
+('DU04', '\"Influence: The Psychology of Persuasion\" (Tâm lý học thuyết phục) - Robert Cialdini', 'Những nguyên lý tâm lý khiến con người dễ bị thuyết phục.', 169000.00, 31, 'tâm lý học thuyết phục.jpg', 'Tâm lý - Xã hội'),
+('DU05', '\"The Social Animal\" (Con thú xã hội) - Elliot Aronson', 'Tác phẩm kinh điển về tâm lý học xã hội.', 472000.00, 44, 'con thú xã hội.jpg', 'Tâm lý - Xã hội'),
+('DU06', '\"Outliers: The Story of Success\" (Những kẻ xuất chúng) - Malcolm Gladwell', 'Nghiên cứu về các yếu tố tạo nên sự thành công vượt bậc.', 113500.00, 3, 'những kẻ xuất chúng.jpg', 'Tâm lý - Xã hội'),
+('TM01', '\"Cha Giàu, Cha Nghèo\" - Robert Kiyosaki', 'Những bài học về tư duy tài chính và làm giàu.', 490000.00, 55, 'cha giàu, cha nghèo.jpg', ' Kinh tế - Kinh doanh'),
+('TM02', '\"The Lean Startup\" - Eric Ries', 'Hướng dẫn cách khởi nghiệp thành công trong thế giới kinh doanh hiện đại.', 132000.00, 7, 'The Lean Startup.jpg', ' Kinh tế - Kinh doanh'),
+('TM03', '\"Tư duy triệu phú\" - T. Harv Eker', 'Khám phá sự khác biệt trong tư duy của người giàu và người nghèo.', 108000.00, 9, 'tư duy triệu phú.jpg', ' Kinh tế - Kinh doanh'),
+('TM04', '\"Good to Great\" (Từ tốt đến vĩ đại) - Jim Collins', 'Khám phá sự khác biệt trong tư duy của người giàu và người nghèo.', 99000.00, 43, 'từ tốt đến vĩ đại.jpg', ' Kinh tế - Kinh doanh'),
+('TM05', '\"The 4-Hour Workweek\" (Tuần làm việc 4 giờ) - Timothy Ferriss', 'Phương pháp tạo thu nhập thụ động và làm việc ít nhưng hiệu quả.', 472000.00, 44, 'tuần làm việc 4 giờ.jpg', ' Kinh tế - Kinh doanh');
 
 -- --------------------------------------------------------
 
@@ -203,9 +203,9 @@ INSERT INTO `products` (`prd_id`, `prd_name`, `prd_detail`, `prd_price`, `prd_qu
 --
 
 CREATE TABLE `sp_noibat` (
-  `sp_id` varchar(15) NOT NULL,
-  `sp_name` varchar(150) NOT NULL,
-  `sp_image` varchar(200) NOT NULL,
+  `sp_id` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `sp_name` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `sp_image` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
   `sp_price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -238,10 +238,10 @@ INSERT INTO `sp_noibat` (`sp_id`, `sp_name`, `sp_image`, `sp_price`) VALUES
 --
 
 CREATE TABLE `users` (
-  `username` varchar(100) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `numberphone` varchar(15) NOT NULL,
-  `address` varchar(150) DEFAULT NULL
+  `username` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
+  `numberphone` varchar(15) COLLATE utf8mb4_general_ci NOT NULL,
+  `address` varchar(150) COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -277,7 +277,7 @@ ALTER TABLE `giamgia`
 -- AUTO_INCREMENT for table `giamgia`
 --
 ALTER TABLE `giamgia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
