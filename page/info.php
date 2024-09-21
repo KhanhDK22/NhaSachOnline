@@ -3,16 +3,19 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="utf-8">
-    <title>nhà Sách Online</title>
+    <title>Nhà Sách Online</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,7 +34,7 @@ session_start();
 </head>
 
 <body>
-<?php include("../config/header1.php"); 
+    <?php include("../config/header1.php"); 
 echo"<script>
 $(document).ready(function(){
     $('#user').addClass('active');
@@ -44,15 +47,15 @@ $(document).ready(function(){
                     <i class='far fa-edit' style='font-size:1em'></i>
                 </button>
                 <div class="dropdown-content" id="myDropdown">
-                    <a href="../user/changepw.php" >Đổi mật khẩu</a>
+                    <a href="../user/changepw.php">Đổi mật khẩu</a>
                     <a href="../user/updateaddr.php">Cập nhật địa chỉ</a>
                 </div>
             </div>
-          
+
         </div>
-    <a style="margin-left: 90%;" href="../user/logout.php">
-    <i class="fas fa-sign-out-alt"></i> Đăng xuất
-  </a>
+        <a style="margin-left: 90%;" href="../user/logout.php">
+            <i class="fas fa-sign-out-alt"></i> Đăng xuất
+        </a>
         <div class="info">
             <?php 
             
@@ -77,18 +80,18 @@ $(document).ready(function(){
                   
                 }
             ?>
-        <div class="thanh-phan">
-             <div onclick="showSection('donmoi')">Chờ xác nhận</div> 
-            <div onclick="showSection('donduyet')">Chờ lấy hàng</div>
-            <div onclick="showSection('don-ship')">Chờ giao hàng</div>
-            <div onclick="showSection('don-thanh-cong')">Đơn hoàn thành</div>
-            <div onclick="showSection('don-huy')">Đơn đã hủy</div>
-        </div>
-        <div class="order">
-        <section class="donmoi">
-                <h2>Chờ xác nhận</h2>
-                <ul class="accept_order">
-                    <?php
+            <div class="thanh-phan">
+                <div onclick="showSection('donmoi')">Chờ xác nhận</div>
+                <div onclick="showSection('donduyet')">Chờ lấy hàng</div>
+                <div onclick="showSection('don-ship')">Chờ giao hàng</div>
+                <div onclick="showSection('don-thanh-cong')">Đơn hoàn thành</div>
+                <div onclick="showSection('don-huy')">Đơn đã hủy</div>
+            </div>
+            <div class="order">
+                <section class="donmoi">
+                    <h2>Chờ xác nhận</h2>
+                    <ul class="accept_order">
+                        <?php
                         $userorder = $_SESSION['username'];
                         require('../config/connect.php');
                         mysqli_set_charset($conn, 'utf8');
@@ -124,13 +127,13 @@ $(document).ready(function(){
                         }   
                         $conn->close();      
                         ?>
-            </ul>
-            </section>
-            <section class="donduyet">
-                <h2>Chờ lấy hàng</h2>
-                <ul class="pending-orders">
-                <div class="form_order" ></div>
-                    <li><?php
+                    </ul>
+                </section>
+                <section class="donduyet">
+                    <h2>Chờ lấy hàng</h2>
+                    <ul class="pending-orders">
+                        <div class="form_order"></div>
+                        <li><?php
                         $userorder = $_SESSION['username'];
                         require('../config/connect.php');
                         mysqli_set_charset($conn, 'utf8');
@@ -166,14 +169,14 @@ $(document).ready(function(){
                         $conn->close();          
                         ?>
                         </li>
-                </ul>
-            </section>
-            <section class="don-ship">
-                <h2>Chờ giao hàng</h2>
-                <ul class="shipping-orders">
-                <div class="form_order" ></div>
-                    <li>
-                        <?php
+                    </ul>
+                </section>
+                <section class="don-ship">
+                    <h2>Chờ giao hàng</h2>
+                    <ul class="shipping-orders">
+                        <div class="form_order"></div>
+                        <li>
+                            <?php
                         $userorder = $_SESSION['username'];
                         require('../config/connect.php');
                         mysqli_set_charset($conn, 'utf8');
@@ -209,13 +212,13 @@ $(document).ready(function(){
                         $conn->close();             
                         ?>
                         </li>
-                </ul>
-            </section>
-            <section class="don-thanh-cong">
-                <h2>Đơn hoàn thành</h2>
-                <ul class="success-orders">
-                <div class="form_order" ></div>
-                    <li><?php
+                    </ul>
+                </section>
+                <section class="don-thanh-cong">
+                    <h2>Đơn hoàn thành</h2>
+                    <ul class="success-orders">
+                        <div class="form_order"></div>
+                        <li><?php
                         $userorder = $_SESSION['username'];
                         require('../config/connect.php');
                         mysqli_set_charset($conn, 'utf8');
@@ -250,13 +253,13 @@ $(document).ready(function(){
                         }   
                         $conn->close();      
                         ?></li>
-                </ul>
-            </section>
-            <section class="don-huy">
-                <h2>Đơn đã hủy</h2>
-                <ul class="huy-orders">
-                <div class="form_order" ></div>
-                    <li><?php
+                    </ul>
+                </section>
+                <section class="don-huy">
+                    <h2>Đơn đã hủy</h2>
+                    <ul class="huy-orders">
+                        <div class="form_order"></div>
+                        <li><?php
                        $user_curtainly = $_SESSION['username'];
                        require('../config/connect.php');
                        mysqli_set_charset($conn, 'utf8');
@@ -292,127 +295,122 @@ $(document).ready(function(){
                        }
                        $conn->close();
                        ?>
-                            
+
                         </li>
-                </ul>
-            </section>
+                    </ul>
+                </section>
+            </div>
         </div>
     </div>
-</div>
     <?php
     include('../config/footer.php');
     ?>
 
-    
+
 </body>
 <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.order section');
-            sections.forEach(section => {
-                if (section.classList.contains(sectionId)) {
-                    section.classList.add('active');
-                } else {
-                    section.classList.remove('active');
-                }
-            });
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.order section');
+    sections.forEach(section => {
+        if (section.classList.contains(sectionId)) {
+            section.classList.add('active');
+        } else {
+            section.classList.remove('active');
         }
-    </script>
-     <script>
-        // JavaScript
-        function toggleDropdown() {
-            var dropdown = document.getElementById("myDropdown");
-            dropdown.classList.toggle("show");
-        }
+    });
+}
+</script>
+<script>
+// JavaScript
+function toggleDropdown() {
+    var dropdown = document.getElementById("myDropdown");
+    dropdown.classList.toggle("show");
+}
 
-        // Đóng danh sách khi bấm ra ngoài
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropdown button')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
+// Đóng danh sách khi bấm ra ngoài
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown button')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
             }
         }
-    </script>
-     <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
-    <script src="../lib/wow/wow.min.js "></script>
-    <script src="../lib/easing/easing.min.js "></script>
-    <script src="../lib/waypoints/waypoints.min.js "></script>
-    <script src="../lib/counterup/counterup.min.js "></script>
-    <script src="../lib/owlcarousel/owl.carousel.min.js "></script>
-    <script src="../lib/tempusdominus/js/moment.min.js "></script>
-    <script src="../lib/tempusdominus/js/moment-timezone.min.js "></script>
-    <script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js "></script>
+    }
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
+<script src="../lib/wow/wow.min.js "></script>
+<script src="../lib/easing/easing.min.js "></script>
+<script src="../lib/waypoints/waypoints.min.js "></script>
+<script src="../lib/counterup/counterup.min.js "></script>
+<script src="../lib/owlcarousel/owl.carousel.min.js "></script>
+<script src="../lib/tempusdominus/js/moment.min.js "></script>
+<script src="../lib/tempusdominus/js/moment-timezone.min.js "></script>
+<script src="../lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js "></script>
 
-    <!-- Template Javascript -->
-    <script src="../js/main.js "></script>
+<!-- Template Javascript -->
+<script src="../js/main.js "></script>
 
-</html>      
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
-    <script src="..//lib/wow//wow.min.js "></script>
-    <script src="..//lib/easing//easing.min.js "></script>
-    <script src="..//lib/waypoints//waypoints.min.js "></script>
-    <script src="..//lib/counterup/counterup.min.js "></script>
-    <script src="..//lib/owlcarousel//owl.carousel.min.js "></script>
-    <script src="..//lib/tempusdominus/js//moment.min.js "></script>
-    <script src="..//lib/tempusdominus//js//moment-timezone.min.js "></script>
-    <script src="..//lib/tempusdominus/js//tempusdominus-bootstrap-4.min.js "></script>
+</html>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
+<script src="..//lib/wow//wow.min.js "></script>
+<script src="..//lib/easing//easing.min.js "></script>
+<script src="..//lib/waypoints//waypoints.min.js "></script>
+<script src="..//lib/counterup/counterup.min.js "></script>
+<script src="..//lib/owlcarousel//owl.carousel.min.js "></script>
+<script src="..//lib/tempusdominus/js//moment.min.js "></script>
+<script src="..//lib/tempusdominus//js//moment-timezone.min.js "></script>
+<script src="..//lib/tempusdominus/js//tempusdominus-bootstrap-4.min.js "></script>
 
-    <!-- Template Javascript -->
-    <script src="..//js//main.js "></script>
-    <script>
+<!-- Template Javascript -->
+<script src="..//js//main.js "></script>
+<script>
 function myFunction() {
     var input, filter, ul, li, h5, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     ul = document.getElementById("myUL");
     li = ul.getElementsByTagName("li");
-    var found = false; 
+    var found = false;
     for (i = 0; i < li.length; i++) {
         h5 = li[i].getElementsByTagName("h5")[0];
         txtValue = h5.textContent || h5.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             li[i].style.display = "";
-            found = true; 
+            found = true;
         } else {
             li[i].style.display = "none";
         }
     }
     if (found === false) {
-    var notFound = document.createElement("li");
-    notFound.textContent = "Không tìm thấy sản phẩm";
-    setTimeout(function () {
-        notFound.remove();
-    }, 5000);
-    ul.appendChild(notFound);
-}
+        var notFound = document.createElement("li");
+        notFound.textContent = "Không tìm thấy sản phẩm";
+        setTimeout(function() {
+            notFound.remove();
+        }, 5000);
+        ul.appendChild(notFound);
+    }
 
 }
-
-    </script>
-    <script>
+</script>
+<script>
 var cancelOrderBtns = document.querySelectorAll("#cancelOrderBtn");
 
 cancelOrderBtns.forEach(function(btn) {
-  btn.addEventListener("click", function() {
-    var order_id = this.getAttribute("data-order-id");
-    var confirmed = confirm('Bạn có chắc chắn muốn hủy đơn hàng này?');
-    if (confirmed) {
-        window.location.href = 'remove_product.php?order_id=' + order_id;
-    }
-    else{
-    }
-  });
+    btn.addEventListener("click", function() {
+        var order_id = this.getAttribute("data-order-id");
+        var confirmed = confirm('Bạn có chắc chắn muốn hủy đơn hàng này?');
+        if (confirmed) {
+            window.location.href = 'remove_product.php?order_id=' + order_id;
+        } else {}
+    });
 });
-
 </script>
 
 
 
 </body>
-

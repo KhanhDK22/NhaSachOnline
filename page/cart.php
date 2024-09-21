@@ -234,7 +234,7 @@ if(!isset($_SESSION['username'])){
                                         <a href="thanhtoan.php" class="boxed-btn black">Thanh Toán</a>
                                     </div>
                                 </div>
-                               
+                                
                                 </div>
                             </div>
                         </div>

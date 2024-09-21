@@ -12,7 +12,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,44 +31,44 @@
     <!-- Template Stylesheet -->
     <link href="..//css//style.css" rel="stylesheet">
     <style>
+    #myInput {
+        background-image: url('/css/searchicon.png');
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+    }
 
-#myInput {
-  background-image: url('/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+    #myUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-#myUL {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+    #myUL li a {
+        border: 1px solid #ddd;
+        margin-top: -1px;
+        /* Prevent double borders */
+        background-color: #f6f6f6;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        color: black;
+        display: block
+    }
 
-#myUL li a {
-  border: 1px solid #ddd;
-  margin-top: -1px; /* Prevent double borders */
-  background-color: #f6f6f6;
-  padding: 12px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  display: block
-}
-
-#myUL li a:hover:not(.header) {
-  background-color: #eee;
-}
-</style>
+    #myUL li a:hover:not(.header) {
+        background-color: #eee;
+    }
+    </style>
 </head>
 
 <body>
     <div class="container-xxl bg-white p-0">
-       <?php
+        <?php
        include('../config/header.php');
        ?>
         <!-- Navbar & Hero End -->
@@ -81,15 +83,16 @@
                             <div class="p-4 ">
                                 <i class="fa fa-3x fa-headset text-primary mb-4 "></i>
                                 <h5>không gian sách trực tuyến</h5>
-                                <p>dành cho những người yêu sách! Với sứ mệnh mang tri thức đến gần hơn với mọi người</p>
+                                <p>dành cho những người yêu sách! Với sứ mệnh mang tri thức đến gần hơn với mọi người
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-sm-6 wow fadeInUp " data-wow-delay="0.3s ">
                         <div class="service-item rounded pt-3 ">
                             <div class="p-4 ">
-                            <i class="fa fa-3x fa-headset text-primary mb-4 "></i>
-                            <h5>Chất Lượng</h5>
+                                <i class="fa fa-3x fa-headset text-primary mb-4 "></i>
+                                <h5>Chất Lượng</h5>
                                 <p>Sản phẩm của chúng tôi đạt chất lượng tốt đảm bảo đầy đủ nội dung và vấn đê</p>
                             </div>
                         </div>
@@ -99,7 +102,8 @@
                             <div class="p-4 ">
                                 <i class="fa fa-3x fa-cart-plus text-primary mb-4 "></i>
                                 <h5>Đặt hàng online</h5>
-                                <p>Bạn có thể dặt hàng online,chúng tôi sẽ giao hàng hỏa tốc tới bạn trong thời gian sớm nhất</p>
+                                <p>Bạn có thể dặt hàng online,chúng tôi sẽ giao hàng hỏa tốc tới bạn trong thời gian sớm
+                                    nhất</p>
                             </div>
                         </div>
                     </div>
@@ -125,29 +129,38 @@
                     <div class="col-lg-6 ">
                         <div class="row g-3 ">
                             <div class="col-6 text-start ">
-                                <img class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.1s " src="../image/about-1.jpg ">
+                                <img class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.1s "
+                                    src="../image/about-1.jpg ">
                             </div>
                             <div class="col-6 text-start ">
-                                <img class="img-fluid rounded w-75 wow zoomIn " data-wow-delay="0.3s " src="../image/about-2.jpg " style="margin-top: 25%; ">
+                                <img class="img-fluid rounded w-75 wow zoomIn " data-wow-delay="0.3s "
+                                    src="../image/about-2.jpg " style="margin-top: 25%; ">
                             </div>
                             <div class="col-6 text-end ">
-                                <img class="img-fluid rounded w-75 wow zoomIn " data-wow-delay="0.5s " src="../image/about-3.jpg ">
+                                <img class="img-fluid rounded w-75 wow zoomIn " data-wow-delay="0.5s "
+                                    src="../image/about-3.jpg ">
                             </div>
                             <div class="col-6 text-end ">
-                                <img class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.7s " src="../image/about.jpg ">
+                                <img class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.7s "
+                                    src="../image/about.jpg ">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 ">
                         <h5 class="section-title ff-secondary text-start text-primary fw-normal ">Về chúng tôi</h5>
                         <h1 class="mb-4 ">Chào mừng tới </i>Nhà Sách Online</h1>
-                        <p class="mb-4 ">Chào mừng tới Nhà Sách Online, nơi bạn có thể tìm thấy mọi thể loại sách yêu thích và đặt mua trực tuyến một cách dễ dàng và thuận tiện. Chúng tôi tự hào là một nhà sách trực tuyến, mang đến cho khách hàng những cuốn sách chất lượng cùng dịch vụ tốt nhất.
+                        <p class="mb-4 ">Chào mừng tới Nhà Sách Online, nơi bạn có thể tìm thấy mọi thể loại sách yêu
+                            thích và đặt mua trực tuyến một cách dễ dàng và thuận tiện. Chúng tôi tự hào là một nhà sách
+                            trực tuyến, mang đến cho khách hàng những cuốn sách chất lượng cùng dịch vụ tốt nhất.
                             và dịch vụ tốt nhất</p>
-                        <p class="mb-4 ">Chúng tôi luôn mong muốn được phục vụ và làm hài lòng khách hàng. Hãy thử trải nghiệm mua sắm tại Nhà Sách Online ngay hôm nay và khám phá sự tiện lợi trong việc mua sách trực tuyến với đa dạng đầu sách và giao hàng nhanh chóng. Xin cảm ơn!</p>
+                        <p class="mb-4 ">Chúng tôi luôn mong muốn được phục vụ và làm hài lòng khách hàng. Hãy thử trải
+                            nghiệm mua sắm tại Nhà Sách Online ngay hôm nay và khám phá sự tiện lợi trong việc mua sách
+                            trực tuyến với đa dạng đầu sách và giao hàng nhanh chóng. Xin cảm ơn!</p>
                         <div class="row g-4 mb-4 ">
                             <div class="col-sm-6 ">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">15</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">15
+                                    </h1>
                                     <div class="ps-4 ">
                                         <p class="mb-0 ">Năm</p>
                                         <h6 class="text-uppercase mb-0 ">Kinh Nghiệm</h6>
@@ -156,7 +169,8 @@
                             </div>
                             <div class="col-sm-6 ">
                                 <div class="d-flex align-items-center border-start border-5 border-primary px-3 ">
-                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">20</h1>
+                                    <h1 class="flex-shrink-0 display-5 text-primary mb-0 " data-toggle="counter-up ">20
+                                    </h1>
                                     <div class="ps-4 ">
                                         <p class="mb-0 ">Nổi tiếng</p>
                                         <h6 class="text-uppercase mb-0 ">Đầu bếp</h6>
@@ -164,7 +178,8 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn btn-primary py-3 px-5 mt-2 " href="about.php" style="color:#000000;font-weight:bolder;">Xem Thêm</a>
+                        <a class="btn btn-primary py-3 px-5 mt-2 " href="about.php"
+                            style="color:#000000;font-weight:bolder;">Xem Thêm</a>
                     </div>
                 </div>
             </div>
@@ -183,21 +198,24 @@
                 <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill" href="#tab-1">
+                            <a class="d-flex align-items-center text-start mx-3 ms-0 pb-3 active" data-bs-toggle="pill"
+                                href="#tab-1">
                                 <div class="ps-3">
                                     <h6 class="mt-n1 mb-0 ">Phát triển bản thân</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill" href="#tab-2">
+                            <a class="d-flex align-items-center text-start mx-3 pb-3" data-bs-toggle="pill"
+                                href="#tab-2">
                                 <div class="ps-3 ">
                                     <h6 class="mt-n1 mb-0 ">Tâm lý - Xã hội</h6>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill" href="#tab-3">
+                            <a class="d-flex align-items-center text-start mx-3 me-0 pb-3" data-bs-toggle="pill"
+                                href="#tab-3">
                                 <div class="ps-3 ">
                                     <h6 class="mt-n1 mb-0 ">Kinh tế - Kinh doanh</h6>
                                 </div>
@@ -232,12 +250,12 @@
                                    }
                                }
                                $conn->close();
-                               ?>               
+                               ?>
                             </div>
                         </div>
                         <div id="tab-2" class="tab-pane fade show p-0">
                             <div class="row g-4">
-                            <?php
+                                <?php
                                require('../config/connect.php');
                                mysqli_set_charset($conn,'utf8');
                                $sql = "SELECT * FROM sp_noibat WHERE sp_id LIKE '%DU%'";
@@ -262,12 +280,12 @@
                                    }
                                }
                                $conn->close();
-                               ?>             
+                               ?>
                             </div>
                         </div>
                         <div id="tab-3" class="tab-pane fade show p-0">
                             <div class="row g-4">
-                            <?php
+                                <?php
                                require('../config/connect.php');
                                mysqli_set_charset($conn,'utf8');
                                $sql = "SELECT * FROM sp_noibat WHERE sp_id LIKE '%TM%'";
@@ -292,7 +310,7 @@
                                    }
                                }
                                $conn->close();
-                               ?>             
+                               ?>
                             </div>
                         </div>
                     </div>
@@ -302,58 +320,66 @@
         <!-- Menu End -->
 
 
-<!-- Testimonial Start -->
-<div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="text-center">
-            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Đánh Giá  </h5>
-            <h1 class="mb-5">Khách hàng thân thiết của chúng tôi!!!</h1>
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="section-title ff-secondary text-center text-primary fw-normal">Đánh Giá </h5>
+                    <h1 class="mb-5">Khách hàng thân thiết của chúng tôi!!!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel">
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Sách của nhà sách rất đa dạng và phong phú. Tôi luôn tìm thấy những cuốn sách mình yêu thích
+                            với giá cả hợp lý.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/NSND Trung anh.jpg"
+                                style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">NSND Trung Anh</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Mặc dù mua sách online, nhưng dịch vụ giao hàng rất nhanh chóng và chất lượng sách luôn tuyệt
+                            vời!</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/công lý.jpg"
+                                style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">NSND Công Lý</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Việc mua sách tại nhà sách online rất tiện lợi và dễ dàng. Tôi thường xuyên tìm thấy những
+                            đầu sách mình cần.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/qung èo.jpg"
+                                style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">NSND Quang Tèo</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item bg-transparent border rounded p-4">
+                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                        <p>Tôi rất hài lòng với sự đa dạng của các đầu sách và dịch vụ khách hàng tuyệt vời từ nhà sách
+                            online này.</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/thaydz.jpg"
+                                style="width: 50px; height: 50px;">
+                            <div class="ps-3">
+                                <h5 class="mb-1">Thầy Ngọc Anh</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="owl-carousel testimonial-carousel">
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>Sách của nhà sách rất đa dạng và phong phú. Tôi luôn tìm thấy những cuốn sách mình yêu thích với giá cả hợp lý.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/NSND Trung anh.jpg" style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">NSND Trung Anh</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>Mặc dù mua sách online, nhưng dịch vụ giao hàng rất nhanh chóng và chất lượng sách luôn tuyệt vời!</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/công lý.jpg" style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">NSND Công Lý</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>Việc mua sách tại nhà sách online rất tiện lợi và dễ dàng. Tôi thường xuyên tìm thấy những đầu sách mình cần.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/qung èo.jpg" style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">NSND Quang Tèo</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-item bg-transparent border rounded p-4">
-                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                <p>Tôi rất hài lòng với sự đa dạng của các đầu sách và dịch vụ khách hàng tuyệt vời từ nhà sách online này.</p>
-                <div class="d-flex align-items-center">
-                    <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/thaydz.jpg" style="width: 50px; height: 50px;">
-                    <div class="ps-3">
-                        <h5 class="mb-1">Thầy Ngọc Anh</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+        <!-- Testimonial End -->
 
 
         <!-- footer -->
@@ -361,23 +387,27 @@
             <div class="container py-5 ">
                 <div class="row g-5 ">
                     <div class="col-lg-3 col-md-6 ">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Nhà hàng</h4>
-                        <a class="btn btn-link " href="about.html">Về chúng tôi</a>
-                        <a class="btn btn-link " href="HTML/contact.html">Liên Hệ</a>
-                        <a class="btn btn-link " href="menu.html">Mua hàng ngay</a>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Nhà sách online
+                        </h4>
+                        <a class="btn btn-link " href="about.php">Về chúng tôi</a>
+                        <a class="btn btn-link " href="contact.php">Liên Hệ</a>
+                        <a class="btn btn-link " href="product.php">Mua hàng ngay</a>
                         <a class="btn btn-link " href="# ">Chính sách bảo mật</a>
-                        <a class="btn btn-link " href=" #">Điều khoản & Điều kiện</a>
+                        <a class="btn btn-link " href="#">Điều khoản & Điều kiện</a>
                     </div>
                     <div class="col-lg-3 col-md-6 ">
                         <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Liên Hệ</h4>
-                        <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>123 Phố Trần Duy Hưng,Hà Nội,Việt Nam</p>
+                        <p class="mb-2 "><i class="fa fa-map-marker-alt me-3 "></i>123 Phố Trần Duy Hưng,Hà Nội,Việt Nam
+                        </p>
                         <p class="mb-2 "><i class="fa fa-phone-alt me-3 "></i>+84 862088336</p>
                         <p class="mb-2 "><i class="fa fa-envelope me-3 "></i>nhasachonline@gmail.com</p>
                         <div class="d-flex pt-2 ">
                             <a class="btn btn-outline-light btn-social " href="# "><i class="fab fa-twitter "></i></a>
-                            <a class="btn btn-outline-light btn-social " href=" #"><i class="fab fa-facebook-f "></i></a>
+                            <a class="btn btn-outline-light btn-social " href=" #"><i
+                                    class="fab fa-facebook-f "></i></a>
                             <a class="btn btn-outline-light btn-social " href=" #"><i class="fab fa-youtube "></i></a>
-                            <a class="btn btn-outline-light btn-social " href="HTML/admin.html "> <i class="fab fa-tiktok "></i></a>
+                            <a class="btn btn-outline-light btn-social " href="HTML/admin.html "> <i
+                                    class="fab fa-tiktok "></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 ">
@@ -388,12 +418,15 @@
                         <p>9AM - 11.30PM</p>
                     </div>
                     <div class="col-lg-3 col-md-6 ">
-                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Gửi phản hồi tới chúng tôi</h4>
+                        <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4 ">Gửi phản hồi tới
+                            chúng tôi</h4>
                         <p>Hãy gửi chúng tôi lời phản hồi của bạn</p>
                         <form action=" ">
                             <div class="position-relative mx-auto " style="max-width: 400px; ">
-                                <input class="form-control border-primary w-100 py-3 ps-4 pe-5 " type="text " placeholder="Phản hồi của bạn ">
-                                <button type="submit " class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2 ">Gửi</button>
+                                <input class="form-control border-primary w-100 py-3 ps-4 pe-5 " type="text "
+                                    placeholder="Phản hồi của bạn ">
+                                <button type="submit "
+                                    class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2 ">Gửi</button>
                             </div>
                         </form>
                     </div>
@@ -404,7 +437,8 @@
 
 
         <!-- Back to Top -->
-        <a href="index.php" class="btn btn-lg btn-primary btn-lg-square back-to-top " aria-label="QUAY LẠI"><i class="bi bi-arrow-up "></i></a>
+        <a href="index.php" class="btn btn-lg btn-primary btn-lg-square back-to-top " aria-label="QUAY LẠI"><i
+                class="bi bi-arrow-up "></i></a>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js "></script>
@@ -442,34 +476,33 @@
     <script src="..//lib//waypoints//waypoints.min.js "></script>
     <script src="..//js//menu.js "></script>
     <script>
-function myFunction() {
-    var input, filter, ul, li, h5, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    var found = false; 
-    for (i = 0; i < li.length; i++) {
-        h5 = li[i].getElementsByTagName("h5")[0];
-        txtValue = h5.textContent || h5.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-            found = true; 
-        } else {
-            li[i].style.display = "none";
+    function myFunction() {
+        var input, filter, ul, li, h5, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        var found = false;
+        for (i = 0; i < li.length; i++) {
+            h5 = li[i].getElementsByTagName("h5")[0];
+            txtValue = h5.textContent || h5.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                found = true;
+            } else {
+                li[i].style.display = "none";
+            }
         }
+        if (found === false) {
+            var notFound = document.createElement("li");
+            notFound.textContent = "Không tìm thấy sản phẩm";
+            setTimeout(function() {
+                notFound.remove();
+            }, 5000);
+            ul.appendChild(notFound);
+        }
+
     }
-    if (found === false) {
-    var notFound = document.createElement("li");
-    notFound.textContent = "Không tìm thấy sản phẩm";
-    setTimeout(function () {
-        notFound.remove();
-    }, 5000);
-    ul.appendChild(notFound);
-}
-
-}
-
     </script>
 
 
