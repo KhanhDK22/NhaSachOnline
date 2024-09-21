@@ -14,7 +14,7 @@ $stmt->bind_param('i', $id);
 
 if ($stmt->execute()) {
     echo "Xóa mã giảm giá thành công!";
-    header('Location: http://nhasachonline.test/NhaSachOnline/admin/admin.php?quanly=giamgia'); 
+    header('Location: admin.php?quanly=giamgia'); 
     exit;
 } else {
     echo "Xóa thất bại!";

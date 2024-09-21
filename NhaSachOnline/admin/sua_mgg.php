@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($updateStmt->execute()) {
         echo "Cập nhật thành công!";
-        header('Location: http://nhasachonline.test/NhaSachOnline/admin/admin.php?quanly=giamgia'); // Redirect to the main page
+        header('Location:admin.php?quanly=giamgia'); // Redirect to the main page
         exit;
     } else {
         echo "Cập nhật thất bại!";
