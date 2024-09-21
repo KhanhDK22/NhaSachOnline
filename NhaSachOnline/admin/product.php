@@ -1,5 +1,5 @@
 <div class="sanpham">
-        <?php
+    <?php
             require('../config/connect.php');
             mysqli_set_charset($conn, 'utf8');
             $sql = 'SELECT * FROM products';
@@ -23,7 +23,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 $img_prd = $row['prd_img'];
                 $img_path = 'image/' . $img_prd; // Thay đổi đường dẫn thư mục của bạn
-              
+                echo $img_path;
                 echo "<tr>
                         <td style='text-align:center'>" . $row["prd_id"] . "</td>
                         <td style='text-align:center'>" . $row["prd_name"] . "</td>
@@ -49,67 +49,70 @@
 } 
 ?>
 
-<a href='mode.php?delete=$row['prd_id']'></a>
-            <div class="table-content">
-            </div>
+    <a href='mode.php?delete=$row[' prd_id']'></a>
+    <div class="table-content">
+    </div>
 
-            <div class="table-footer">
-                <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)';">
-                    <i class="fa fa-plus-square"></i>
-                    Thêm sản phẩm
-                </button>
-            </div>
-            <form method="post" action="admin.php?quanly=product" enctype="multipart/form-data">
+    <div class="table-footer">
+        <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)';">
+            <i class="fa fa-plus-square"></i>
+            Thêm sản phẩm
+        </button>
+    </div>
+    <form method="post" action="admin.php?quanly=product" enctype="multipart/form-data">
 
-            <div id="khungThemSanPham" class="overlay">
-             <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
-                        <table class="overlayTable table-outline table-content table-header">
-                    <tr>
-                        <th colspan="2">Thêm Sản Phẩm</th>
-                    </tr>
-                    <tr>
-                        <td>Mã sản phẩm:</td>
-                        <td><input type="text" name="masp" id="maspThem" required></td>
-                    </tr>
-                    <tr>
-                        <td>Tên sản phẩm:</td>
-                        <td><input type="text" name="tensp" required></td>
-                    </tr>
-                    <tr>
-                        <td>Ảnh sản phẩm</td>
-                        <td><input type="file" name="anhsp" required></td>
-                    </tr>
-                    <tr>
-                        <td>Mô tả sản phẩm:</td>
-                        <td><textarea style="height: 5em;" name="motasp" required></textarea></td>
-                    </tr>
-                    <tr>
-                        <td>Số lượng:</td>
-                        <td><input type="text" name="soluongsp" required></td>
-                    </tr>
-                    <tr>
-                        <td>Giá:</td>
-                        <td><input type="text" name="giasp" required></td>
-                    </tr>
-                    <tr>
-                        <td>Loại hàng hóa</td>
-                        <td>
-                            <select name="choncatgory">
-                                <option value="Phát triển bản thân">Phát triển bản thân</option>
-                                <option value="Tâm lý - Xã hội">Tâm lý - Xã hội</option>
-                                <option value="Kinh tế - Kinh doanh">Kinh tế - Kinh doanh</option>
-                                <!-- Các option khác -->
-                            </select>
-                        </td>
-                    </tr>
+        <div id="khungThemSanPham" class="overlay">
+            <span class="close" onclick="this.parentElement.style.transform = 'scale(0)';">&times;</span>
+            <table class="overlayTable table-outline table-content table-header">
+                <tr>
+                    <th colspan="2">Thêm Sản Phẩm</th>
+                </tr>
+                <tr>
+                    <td>Mã sản phẩm:</td>
+                    <td><input type="text" name="masp" id="maspThem" required></td>
+                </tr>
+                <tr>
+                    <td>Tên sản phẩm:</td>
+                    <td><input type="text" name="tensp" required></td>
+                </tr>
+                <tr>
+                    <td>Ảnh sản phẩm</td>
+                    <td><input type="file" name="anhsp" required></td>
+                    <!-- <td><input type="file"></td> -->
+                </tr>
+                <tr>
+                    <td>Mô tả sản phẩm:</td>
+                    <td><textarea style="height: 5em;" name="motasp" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Số lượng:</td>
+                    <td><input type="text" name="soluongsp" required></td>
+                </tr>
+                <tr>
+                    <td>Giá:</td>
+                    <td><input type="text" name="giasp" required></td>
+                </tr>
+                <tr>
+                    <td>Loại hàng hóa</td>
+                    <td>
+                        <select name="choncatgory">
+                            <option value="Phát triển bản thân">Phát triển bản thân</option>
+                            <option value="Tâm lý - Xã hội">Tâm lý - Xã hội</option>
+                            <option value="Kinh tế - Kinh doanh">Kinh tế - Kinh doanh</option>
+                            <!-- Các option khác -->
+                        </select>
+                    </td>
+                </tr>
 
-            <tr>
-                  <td colspan="2" class="table-footer"> <input type="submit" style="width: 10em;height: 3em;background-color:  #F28123;color: white;" value="Thêm sản phẩm"> </td>
-                 </tr>
+                <tr>
+                    <td colspan="2" class="table-footer"> <input type="submit"
+                            style="width: 10em;height: 3em;background-color:  #F28123;color: white;"
+                            value="Thêm sản phẩm"> </td>
+                </tr>
             </table>
-            </div>
-            </form>
-                <?php
+        </div>
+    </form>
+    <?php
                 if (
                     isset($_POST['masp']) &&
                     isset($_POST['tensp']) &&
@@ -173,6 +176,88 @@
                     }
                 }
                 ?>
-                
-            <div id="khungSuaSanPham" class="overlay"></div>
-        </div>
+
+    <?php
+    if (
+        isset($_POST['masp']) &&
+        isset($_POST['tensp']) &&
+        isset($_FILES['anhsp']) &&
+        isset($_POST['motasp']) &&
+        isset($_POST['soluongsp']) &&
+        isset($_POST['giasp']) &&
+        isset($_POST['choncatgory'])
+    ) {
+        require('../config/connect.php'); // Đảm bảo kết nối cơ sở dữ liệu
+
+        $maspthem = $_POST['masp'];
+        $tensp = $_POST['tensp'];
+        $mota = $_POST['motasp'];
+        $soluong = $_POST['soluongsp'];
+        $giasp = $_POST['giasp'];
+        $choncatgory = $_POST['choncatgory'];
+        $prd_img_name = basename($_FILES['anhsp']['name']);
+        $target_dir = 'image/';
+        $target_file = $target_dir . $prd_img_name;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Kiểm tra xem file có phải là ảnh thực
+        $check = getimagesize($_FILES['anhsp']['tmp_name']);
+        if ($check !== false) {
+            // File là ảnh
+            $uploadOk = 1;
+
+            // Kiểm tra xem file ảnh có tồn tại không
+            if (file_exists($target_file)) {
+                echo "<script>alert('Ảnh đã tồn tại.')</script>";
+                $uploadOk = 0;
+            }
+
+            // Giới hạn dung lượng ảnh (ví dụ 5MB)
+            if ($_FILES['anhsp']['size'] > 5000000) {
+                echo "<script>alert('Dung lượng file quá lớn.')</script>";
+                $uploadOk = 0;
+            }
+
+            // Chỉ cho phép các định dạng ảnh phổ biến
+            if ($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif") {
+                echo "<script>alert('Chỉ chấp nhận các định dạng JPG, JPEG, PNG, GIF.')</script>";
+                $uploadOk = 0;
+            }
+
+            // Nếu tất cả kiểm tra đều ổn, thực hiện upload file
+            if ($uploadOk == 1) {
+                if (move_uploaded_file($_FILES['anhsp']['tmp_name'], $target_file)) {
+                    // Xử lý thêm sản phẩm vào database
+                    $sql = "SELECT * FROM products WHERE prd_id = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $maspthem);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+                        echo "<script>alert('Sản phẩm đã tồn tại')</script>";
+                    } else {
+                        $query = "INSERT INTO products (prd_id, prd_name, prd_detail, prd_price, prd_quantity, prd_img, prd_category) VALUES (?, ?, ?, ?, ?, ?, ?)";
+                        $stmt = $conn->prepare($query);
+                        $stmt->bind_param("sssdiss", $maspthem, $tensp, $mota, $giasp, $soluong, $prd_img_name, $choncatgory);
+                        $result = $stmt->execute();
+
+                        if ($result) {
+                            echo "<script>alert('Thêm sản phẩm thành công')</script>";
+                            echo "<script>window.location = 'admin.php?quanly=product'</script>"; // Tải lại trang admin.php sau khi thêm thành công
+                        } else {
+                            echo "<script>alert('Thêm sản phẩm không thành công')</script>";
+                        }
+                    }
+                } else {
+                    echo "<script>alert('Xin lỗi, đã có lỗi khi tải file của bạn.')</script>";
+                }
+            }
+        } else {
+            echo "<script>alert('File không phải là ảnh.')</script>";
+        }
+    }
+?>
+
+    <div id="khungSuaSanPham" class="overlay"></div>
+</div>

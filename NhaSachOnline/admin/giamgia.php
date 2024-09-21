@@ -24,8 +24,8 @@
                     <td style='text-align: center;'>".$row['soTien']."</td>
                     <td style='text-align: center;'>".($row['trangThai'] == 1 ? 'Chưa sử dụng' : 'Đã sử dụng')."</td>
                     <td style='text-align: center;'>
-                        <a href='sua.php?id=".$row['id']."'>Sửa</a> |
-                        <a href='xoa.php?id=".$row['id']."' onclick=\"return confirm('Bạn có chắc chắn muốn xóa không?')\">Xóa</a>
+                        <a href='sua_mgg.php?id=".$row['id']."'><i style='color:blue;font-size:1.4em' class='fa fa-pencil'></i></a> |
+                        <a href='xoa_mgg.php?id=".$row['id']."' onclick=\"return confirm('Bạn có chắc chắn muốn xóa không?')\"><i style='color:red;font-size:1.4em' class='fa fa-trash-o'></i></a>
                     </td>
                 </tr>";
             }
