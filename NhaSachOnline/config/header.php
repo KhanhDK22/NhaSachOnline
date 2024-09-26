@@ -71,7 +71,7 @@ mysqli_close($conn); // Đóng kết nối
                         <div class="col-lg-6 text-center text-lg-start ">
                             <h1 class="display-3 text-white animated slideInLeft ">Chào mừng bạn  <br>đến với "Nhà Sách Online"</h1>
                             <p class="text-white animated slideInLeft mb-4 pb-2 ">Nhà Sách Online cung cấp hàng ngàn đầu sách đa dạng thể loại từ văn học, kinh doanh, phát triển bản thân, cho đến khoa học, kỹ năng sống, và nhiều lĩnh vực khác. </p>
-                            <a href="menu.html " class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft " style="color:#000000;font-weight:bolder;">Đặt Hàng Ngay</a>
+                            <a href="product.php" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft " style="color:#000000;font-weight:bolder;">Đặt Hàng Ngay</a>
                         </div>
                     </div>
                 </div>

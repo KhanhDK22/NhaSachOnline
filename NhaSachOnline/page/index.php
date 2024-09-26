@@ -140,10 +140,7 @@
                                 <img class="img-fluid rounded w-75 wow zoomIn " data-wow-delay="0.5s "
                                     src="../image/about-3.jpg ">
                             </div>
-                            <div class="col-6 text-end ">
-                                <img class="img-fluid rounded w-100 wow zoomIn " data-wow-delay="0.7s "
-                                    src="../image/about.jpg ">
-                            </div>
+                         
                         </div>
                     </div>
                     <div class="col-lg-6 ">
