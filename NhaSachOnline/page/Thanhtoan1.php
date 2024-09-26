@@ -138,7 +138,7 @@ session_start();
                     echo "<h3>Bạn cần thanh toán<span style='color:red'>".$total_100."đ</span> cho đơn hàng của mình</h3>";
                 }
                 ?>
-               <img src="../image/mã qr.jpg" alt="mã qr">
+               <img src="../image/mã qr1.jpg" alt="mã qr">
                <div class="image-inputs">
                 <div class="image-upload">
                 <label for="minh-chung" class="image-label">
