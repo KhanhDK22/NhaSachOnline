@@ -87,9 +87,9 @@ if ($ketqua->num_rows > 0) {
     
         foreach ($rows as $row) {
             echo '<div class="col-lg-4 col-md-6 text-center ';
-            if ($row['prd_category'] === 'Tâm lý - Xã hội') {
+            if ($row['prd_category'] === 'Kinh tế - Kinh doanh') {
                 echo 'desert';
-            } elseif ($row['prd_category'] === 'Kinh tế - Kinh doanh') {
+            } elseif ($row['prd_category'] === 'Tâm lý - Xã hội') {
                 echo 'drinking';
             } elseif ($row['prd_category'] === 'Phát triển bản thân') {
                 echo 'food';

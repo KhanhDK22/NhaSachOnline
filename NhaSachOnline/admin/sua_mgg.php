@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($updateStmt->execute()) {
         echo "Cập nhật thành công!";
-        header('Location:admin.php?quanly=giamgia'); // Redirect to the main page
+        header('Location: admin.php?quanly=giamgia'); // Redirect to the main page
         exit;
     } else {
         echo "Cập nhật thất bại!";
@@ -50,11 +50,69 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <title>Chỉnh sửa mã giảm giá</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    form {
+        background-color: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+    </style>
 </head>
 
 <body>
-    <h2>Chỉnh sửa mã giảm giá</h2>
+
     <form method="POST">
+        <h2>Chỉnh sửa mã giảm giá</h2>
         <label>Mã giảm giá:</label><br>
         <input type="text" name="maGiamGia" value="<?php echo $row['maGiamGia']; ?>" required><br>
 
@@ -69,6 +127,24 @@ $conn->close();
 
         <button type="submit">Lưu</button>
     </form>
+
+    <script>
+    document.getElementById('editForm').addEventListener('submit', function(event) {
+        // Ngăn form submit ngay lập tức
+        event.preventDefault();
+
+        // Lấy giá trị từ các trường input
+        var maGiamGia = document.getElementById('maGiamGia').value;
+        var soTien = document.getElementById('soTien').value;
+        var trangThai = document.getElementById('trangThai').value == 1 ? 'Chưa sử dụng' : 'Đã sử dụng';
+
+        // Hiển thị thông báo với mã giảm giá đã được cập nhật
+        alert("Mã giảm giá: " + maGiamGia + "\nSố tiền: " + soTien + "\nTrạng thái: " + trangThai);
+
+        // Sau khi thông báo, tiếp tục gửi form
+        this.submit();
+    });
+    </script>
 </body>
 
 </html>
