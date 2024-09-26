@@ -83,31 +83,39 @@
                 <h4>Dear </h4>
             </div>
             <?php
-if (isset($_GET['id']) ||(!empty($_GET['id'])) ){
+if (isset($_GET['id']) && !empty($_GET['id'])) {
     $ct_id = $_GET['id']; 
     require('../config/connect.php');
     mysqli_set_charset($conn, 'utf8');
+
+    // Sử dụng 's' vì ct_id có thể là string
     $stmt = $conn->prepare("SELECT * FROM contacts WHERE ct_id = ?");
-    $stmt->bind_param("i", $ct_id); // i: kiểu integer
+    $stmt->bind_param("s", $ct_id); // s: kiểu string
     $stmt->execute();
     $result = $stmt->get_result();
+
     if ($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
         echo "<div>
-                <h4>Tên tôi là: " . $row['ct_name'] . "</h4>
-                <h4>Số điện thoại: " . $row['ct_numberphone'] . "</h4>
-                <h4>Email: " . $row['ct_email'] . "</h4>
+                <h4>Tên tôi là: " . htmlspecialchars($row['ct_name']) . "</h4>
+                <h4>Số điện thoại: " . htmlspecialchars($row['ct_numberphone']) . "</h4>
+                <h4>Email: " . htmlspecialchars($row['ct_email']) . "</h4>
             </div>
             <div>
-                <h4>Vấn đề: " . $row['ct_problem'] . "</h4>
+                <h4>Vấn đề: " . htmlspecialchars($row['ct_problem']) . "</h4>
                 <h4>Chi tiết:</h4>
-                <p>" . $row['ct_detail'] . "</p>
+                <p>" . htmlspecialchars($row['ct_detail']) . "</p>
             </div>
             <h4 style='margin-left: 20%;'>Mong cửa hàng phản hồi sớm cho tôi!!!</h4>
         </div>";
+    } else {
+        echo "<h4>Không tìm thấy thông tin liên hệ nào.</h4>";
     }
+
+    $stmt->close();
+    $conn->close();
 }
-$conn->close();
+
 ?>
 
     </div>
