@@ -351,25 +351,13 @@
                     </div>
                     <div class="testimonial-item bg-transparent border rounded p-4">
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                        <p>Việc mua sách tại nhà sách online rất tiện lợi và dễ dàng. Tôi thường xuyên tìm thấy những
-                            đầu sách mình cần.</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/qung èo.jpg"
-                                style="width: 50px; height: 50px;">
-                            <div class="ps-3">
-                                <h5 class="mb-1">NSND Quang Tèo</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-transparent border rounded p-4">
-                        <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Tôi rất hài lòng với sự đa dạng của các đầu sách và dịch vụ khách hàng tuyệt vời từ nhà sách
                             online này.</p>
                         <div class="d-flex align-items-center">
                             <img class="img-fluid flex-shrink-0 rounded-circle" src="../image/thaydz.jpg"
                                 style="width: 50px; height: 50px;">
                             <div class="ps-3">
-                                <h5 class="mb-1">Thầy Ngọc Anh</h5>
+                                <h5 class="mb-1">Th.S Ngô Ngọc Anh</h5>
                             </div>
                         </div>
                     </div>
